@@ -3,6 +3,7 @@ package com.nurse.ui.admin;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Point;
 import java.awt.Rectangle;
@@ -31,8 +32,15 @@ public class AdminUI extends JFrame {
 	 */
 	public AdminUI() {
 		try {
-			this.setTitle("Hello World");
+			setTitle("Hello World");
 			
+			JLabel label = new JLabel("ABC");
+			JTextField txtField = new JTextField(20);
+			
+			setLayout(new FlowLayout());
+			
+			add(label);
+			add(txtField);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
