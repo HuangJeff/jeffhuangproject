@@ -26,21 +26,26 @@ import javax.swing.SwingConstants;
 
 @SuppressWarnings("serial")
 public class AdminUI extends JFrame {
+	private final String loginStr = "µn¤Jµøµ¡";
 	
 	/**
 	 * @throws HeadlessException
 	 */
 	public AdminUI() {
 		try {
-			setTitle("Hello World");
+			JPanel jpanel = new JPanel();
+			setTitle(loginStr);
+			jpanel.setBorder(BorderFactory.createTitledBorder(loginStr));
 			
 			JLabel label = new JLabel("ABC");
 			JTextField txtField = new JTextField(20);
 			
 			setLayout(new FlowLayout());
 			
-			add(label);
-			add(txtField);
+			jpanel.add(label);
+			jpanel.add(txtField);
+			
+			add(jpanel);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
