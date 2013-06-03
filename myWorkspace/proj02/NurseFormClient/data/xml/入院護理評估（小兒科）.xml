@@ -1,0 +1,67 @@
+<?xml version='1.0'  encoding='MS950' ?>
+<RESULTS>
+	<ROW>
+		<COLUMN NAME="ID"><![CDATA[46044]]></COLUMN>
+		<COLUMN NAME="VERSION"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="CANCEL_DATE"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="CHART_NO"><![CDATA[0000000]]></COLUMN>
+		<COLUMN NAME="CREATED_BY"><![CDATA[946008]]></COLUMN>
+		<COLUMN NAME="CREATION_DATE"><![CDATA[2012-02-03 15:18:38]]></COLUMN>
+		<COLUMN NAME="INPUT_ARGS1"><![CDATA[null]]></COLUMN>
+		<COLUMN NAME="INPUT_ARGS2"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="INPUT_ARGS3"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="INPUT_ARGS4"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="INPUT_ARGS5"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="IPD_NO"><![CDATA[I12012457]]></COLUMN>
+		<COLUMN NAME="LAST_UPDATE_DATE"><![CDATA[2012-02-03 15:18:38]]></COLUMN>
+		<COLUMN NAME="LAST_UPDATED_BY"><![CDATA[946008]]></COLUMN>
+		<COLUMN NAME="ONWER_SYS"><![CDATA[NIS]]></COLUMN>
+		<COLUMN NAME="PUBLISH_DATE"><![CDATA[2012-02-03 15:18:38]]></COLUMN>
+		<COLUMN NAME="REMARK"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="SHEET_ID"><![CDATA[NISEV004]]></COLUMN>
+		<COLUMN NAME="SHEET_NAME"><![CDATA[入院護理評估（小兒科）]]></COLUMN>
+		<COLUMN NAME="SHEET_VERSION"><![CDATA[22]]></COLUMN>
+		<COLUMN NAME="STATUS"><![CDATA[A]]></COLUMN>
+		<COLUMN NAME="TRANS_ID"><![CDATA[EMR12328253404203634]]></COLUMN>
+		<COLUMN NAME="SHEET_TREE"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<Menu id="NISEV0040" title="root" desc="root" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="root" ntype="">
+<Menu id="SINGLE-00" title="單ㄧ式資料" desc="單一式資料{single}" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="single" ntype="B">
+<Menu id="NISEV004000" title="入院護理評估" desc="入院護理評估{NIS_EV_001}" type="4" lov="null" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001" ntype="B">
+<Item id="NISEV0040000" title="入院方式" desc="入院方式{NIS_EV_001_001}" type="23" lov="NIS_EV_001_001" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_001" ntype="B">
+</Item>
+<Item id="NISEV0040001" title="入住病房時間" desc="入住病房時間{NIS_EV_001_095}" type="9" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_095" ntype="B">
+</Item>
+<Item id="NISEV0040002" title="入院診斷" desc="入院診斷{NIS_EV_001_096}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_096" ntype="B">
+</Item>
+<Item id="NISEV0040003" title="病人來源" desc="病人來源{NIS_EV_001_002}" type="23" lov="NIS_EV_001_002" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_002" ntype="B">
+</Item>
+<Item id="NISEV0040004" title="主訴/入院原因" desc="主訴/入院原因{NIS_EV_001_091}" type="5" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_091" ntype="B">
+</Item>
+<Menu id="NISEV0040005" title="自述血型" desc="自述血型{NIS_EV_001_021}" type="12" lov="NIS_EV_001_021" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_021" ntype="B">
+<Item id="NISEV00400050" title="RH" desc="RH{NIS_EV_001_0211}" type="12" lov="NIS_EV_005_0081" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0211" ntype="B">
+</Item>
+<Item id="NISEV00400051" title="輸血反應" desc="輸血反應{NIS_EV_001_0212}" type="12" lov="NIS_EV_001_0212" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0212" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0040006" title="過去病史" desc="過去病史{NIS_EV_004_005}" type="4" lov="null" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_004_005" ntype="B">
+<Menu id="NISEV00400060" title="疾病史" desc="疾病史{NIS_EV_001_092}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_092" ntype="B">
+<Item id="NISEV004000600" title="病史內容" desc="病史內容{NIS_EV_001_0921}" type="20" lov="NIS_EV_001_0921" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0921" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV00400061" title="手術史" desc="手術史{NIS_EV_001_093}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_093" ntype="B">
+<Item id="NISEV004000610" title="手術內容" desc="手術內容{NIS_EV_001_0931}" type="20" lov="NIS_EV_001_0931" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0931" ntype="B">
+</Item>
+</Menu>
+<Item id="NISEV00400062" title="蠶豆症" desc="蠶豆症{NIS_EV_004_0053}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_004_0053" ntype="B">
+</Item>
+<Item id="NISEV00400063" title="治療" desc="治療{NIS_EV_004_0052}" type="23" lov="NIS_EV_001_103" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_004_0052" ntype="B">
+</Item>
+<Item id="NISEV00400064" title="住院次數" desc="住院次數{NIS_EV_004_0055}" type="23" lov="NIS_EV_001_104" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_004_0055" ntype="B">
+</Item>
+<Menu id="NISEV00400065" title="旅遊史(近三個月內)" desc="旅遊史(近三個月內){NIS_EV_001_013}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_013" ntype="B">
+<Item id="NISEV004000650" title="地點" desc="地點{NIS_EV_001_014}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_014" ntype="B">
+</Item>
+<Item id="NISEV004000651" title="起始日期" desc="起始日期{NIS_EV_001_015}" type="7" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_...]]></COLUMN>
+		<COLUMN NAME="SIGN_TOTAL_FLAG"><![CDATA[]]></COLUMN>
+	</ROW>
+</RESULTS>
