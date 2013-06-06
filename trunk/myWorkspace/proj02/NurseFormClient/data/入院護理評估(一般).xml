@@ -1,0 +1,458 @@
+<?xml version='1.0'  encoding='MS950' ?>
+<RESULTS>
+	<ROW>
+		<COLUMN NAME="ID"><![CDATA[65915]]></COLUMN>
+		<COLUMN NAME="VERSION"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="CANCEL_DATE"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="CHART_NO"><![CDATA[0000000]]></COLUMN>
+		<COLUMN NAME="CREATED_BY"><![CDATA[946008]]></COLUMN>
+		<COLUMN NAME="CREATION_DATE"><![CDATA[2012-02-24 08:02:45]]></COLUMN>
+		<COLUMN NAME="INPUT_ARGS1"><![CDATA[null]]></COLUMN>
+		<COLUMN NAME="INPUT_ARGS2"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="INPUT_ARGS3"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="INPUT_ARGS4"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="INPUT_ARGS5"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="IPD_NO"><![CDATA[I12022207]]></COLUMN>
+		<COLUMN NAME="LAST_UPDATE_DATE"><![CDATA[2013-05-21 11:35:26]]></COLUMN>
+		<COLUMN NAME="LAST_UPDATED_BY"><![CDATA[956013]]></COLUMN>
+		<COLUMN NAME="ONWER_SYS"><![CDATA[NIS]]></COLUMN>
+		<COLUMN NAME="PUBLISH_DATE"><![CDATA[2012-02-24 08:02:45]]></COLUMN>
+		<COLUMN NAME="REMARK"><![CDATA[]]></COLUMN>
+		<COLUMN NAME="SHEET_ID"><![CDATA[NISEV001]]></COLUMN>
+		<COLUMN NAME="SHEET_NAME"><![CDATA[入院護理評估(一般)]]></COLUMN>
+		<COLUMN NAME="SHEET_VERSION"><![CDATA[54]]></COLUMN>
+		<COLUMN NAME="STATUS"><![CDATA[A]]></COLUMN>
+		<COLUMN NAME="TRANS_ID"><![CDATA[EMR12330041786703089]]></COLUMN>
+		<COLUMN NAME="SHEET_TREE"><![CDATA[
+			<?xml version="1.0" encoding="UTF-8"?>
+<Menu id="NISEV0010" title="root" desc="root" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="root" ntype="">
+<Menu id="SINGLE-00" title="單ㄧ式資料" desc="單一式資料{single}" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="single" ntype="B">
+<Menu id="NISEV001000" title="基本資料" desc="基本資料{NIS_EV_001_H}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_H" ntype="B">
+<Item id="NISEV0010000" title="入院方式" desc="入院方式{NIS_EV_001_001}" type="23" lov="NIS_EV_001_001" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_001" ntype="B">
+</Item>
+<Item id="NISEV0010001" title="入住病房時間" desc="入住病房時間{NIS_EV_001_095}" type="9" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_095" ntype="B">
+</Item>
+<Item id="NISEV0010002" title="入院診斷" desc="入院診斷{NIS_EV_001_096}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_096" ntype="B">
+</Item>
+<Item id="NISEV0010003" title="病人來源" desc="病人來源{NIS_EV_001_002}" type="23" lov="NIS_EV_001_002" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_002" ntype="B">
+</Item>
+<Item id="NISEV0010004" title="主要語言" desc="主要語言{NIS_EV_001_003}" type="24" lov="NIS_EV_001_003" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_003" ntype="B">
+</Item>
+<Item id="NISEV0010005" title="婚姻狀況" desc="婚姻狀況{NIS_EV_001_004}" type="12" lov="NIS_EV_001_004" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_004" ntype="B">
+</Item>
+<Item id="NISEV0010006" title="教育程度" desc="教育程度{NIS_EV_001_005}" type="12" lov="NIS_EV_001_005" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_005" ntype="B">
+</Item>
+<Item id="NISEV0010007" title="宗教" desc="宗教{NIS_EV_001_006}" type="23" lov="NIS_EV_001_006" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_006" ntype="B">
+</Item>
+<Menu id="NISEV0010008" title="月經史" desc="月經史{NIS_EV_001_007}" type="12" lov="NISEV001007" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_007" ntype="B">
+<Item id="NISEV00100080" title="LMP(日期)" desc="LMP(日期){NIS_EV_001_050}" type="7" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_050" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010009" title="自述血型" desc="自述血型{NIS_EV_001_021}" type="12" lov="NIS_EV_001_021" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_021" ntype="B">
+<Item id="NISEV00100090" title="RH" desc="RH{NIS_EV_001_0211}" type="12" lov="NIS_EV_005_0081" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0211" ntype="B">
+</Item>
+<Item id="NISEV00100091" title="輸血反應" desc="輸血反應{NIS_EV_001_0212}" type="12" lov="NIS_EV_001_0212" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0212" ntype="B">
+</Item>
+</Menu>
+<Item id="NISEV001000A" title="主訴/入院原因" desc="主訴/入院原因{NIS_EV_001_091}" type="5" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_091" ntype="B">
+</Item>
+</Menu><Menu id="NISEV001001" title="過去史" desc="過去史{NIS_EV_001_H1}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_H1" ntype="B">
+<Menu id="NISEV0010010" title="疾病史" desc="疾病史{NIS_EV_001_092}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_092" ntype="B">
+<Item id="NISEV00100100" title="病史內容" desc="病史內容{NIS_EV_001_0921}" type="20" lov="NIS_EV_001_0921" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0921" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010011" title="手術史" desc="手術史{NIS_EV_001_093}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_093" ntype="B">
+<Item id="NISEV00100110" title="手術內容" desc="手術內容{NIS_EV_001_0931}" type="20" lov="NIS_EV_001_0931" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0931" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010012" title="肢體禁治療" desc="肢體禁治療{NIS_EV_001_008}" type="12" lov="NIS_EV_001_010" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_008" ntype="B">
+<Item id="NISEV00100120" title="動靜脈廔管" desc="動靜脈廔管{NIS_EV_001_009_01}" type="13" lov="NIS_EV_001_011" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_009_01" ntype="B">
+</Item>
+<Item id="NISEV00100121" title="乳癌術後" desc="乳癌術後{NIS_EV_001_009_02}" type="13" lov="NIS_EV_001_011" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_009_02" ntype="B">
+</Item>
+<Item id="NISEV00100122" title="肢體感覺異常" desc="肢體感覺異常{NIS_EV_001_009_03}" type="13" lov="NIS_EV_001_011" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_009_03" ntype="B">
+</Item>
+<Item id="NISEV00100123" title="其他" desc="其他{NIS_EV_001_009_04}" type="13" lov="NIS_EV_001_011" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_009_04" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010013" title="旅遊史(近三個月內)" desc="旅遊史(近三個月內){NIS_EV_001_013}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_013" ntype="B">
+<Item id="NISEV00100130" title="地點" desc="地點{NIS_EV_001_014}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_014" ntype="B">
+</Item>
+<Item id="NISEV00100131" title="起始日期" desc="起始日期{NIS_EV_001_015}" type="7" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_015" ntype="B">
+</Item>
+<Item id="NISEV00100132" title="結束日期" desc="結束日期{NIS_EV_001_0151}" type="7" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0151" ntype="B">
+</Item>
+</Menu>
+<Item id="NISEV0010014" title="職業" desc="職業{NIS_EV_001_042}" type="23" lov="NIS_EV_001_008" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_042" ntype="B">
+</Item>
+<Menu id="NISEV0010015" title="群聚-有無" desc="群聚-有無{NIS_EV_001_0171}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0171" ntype="B">
+<Item id="NISEV00100150" title="群聚-關係" desc="群聚-關係{NIS_EV_001_0172}" type="24" lov="NIS_EV_001_013" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0172" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010016" title="動物接觸史-有無" desc="動物接觸史-有無{NIS_EV_001_0161}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0161" ntype="B">
+<Item id="NISEV00100160" title="接觸動物" desc="接觸動物{NIS_EV_001_0162}" type="24" lov="NIS_EV_001_012" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0162" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010017" title="過敏史-有無" desc="過敏史-有無{NIS_EV_001_0181}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0181" ntype="B">
+<Item id="NISEV00100170" title="過敏史-食物" desc="過敏史-食物{NIS_EV_001_0182}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0182" ntype="B">
+</Item>
+<Item id="NISEV00100171" title="過敏史-藥物" desc="過敏史-藥物{NIS_EV_001_0183}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0183" ntype="B">
+</Item>
+<Item id="NISEV00100172" title="過敏史-其他" desc="過敏史-其他{NIS_EV_001_0184}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0184" ntype="B">
+</Item>
+</Menu>
+</Menu><Menu id="NISEV001002" title="家族史" desc="家族史{NIS_EV_001_H2}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_H2" ntype="B">
+<Menu id="NISEV0010020" title="家族病史-有無" desc="家族病史-有無{NIS_EV_001_0231}" type="12" lov="XU_Z_003" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0231" ntype="B">
+<Item id="NISEV00100200" title="父母" desc="父母{NIS_EV_001_0234}" type="24" lov="NIS_EV_001_016" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0234" ntype="B">
+</Item>
+<Item id="NISEV00100201" title="祖父母" desc="祖父母{NIS_EV_001_0235}" type="24" lov="NIS_EV_001_016" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0235" ntype="B">
+</Item>
+<Item id="NISEV00100202" title="外祖父母" desc="外祖父母{NIS_EV_001_0236}" type="24" lov="NIS_EV_001_016" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0236" ntype="B">
+</Item>
+<Item id="NISEV00100203" title="兄弟姊妹" desc="兄弟姊妹{NIS_EV_001_0237}" type="24" lov="NIS_EV_001_016" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0237" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010021" title="家庭成員" desc="家庭成員{NIS_EV_001_024}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_024" ntype="B">
+<Item id="NISEV00100210" title="家庭成員-父" desc="家庭成員-父{NIS_EV_001_0241}" type="12" lov="NIS_EV_001_017" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0241" ntype="B">
+</Item>
+<Item id="NISEV00100211" title="家庭成員-母" desc="家庭成員-母{NIS_EV_001_0242}" type="12" lov="NIS_EV_001_017" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0242" ntype="B">
+</Item>
+<Item id="NISEV00100212" title="家庭成員-其它" desc="家庭成員-其它{NIS_EV_001_0249}" type="20" lov="NIS_EV_001_0249" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0249" ntype="B">
+</Item>
+</Menu>
+<Item id="NISEV0010022" title="緊急聯絡人" desc="緊急聯絡人{NIS_EV_001_0599}" type="20" lov="NIS_EV_001_0599" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0599" ntype="A">
+</Item>
+<Item id="NISEV0010023" title="主要照顧人" desc="主要照顧人{NIS_EV_001_0597}" type="20" lov="NIS_EV_001_0597" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0597" ntype="A">
+</Item>
+</Menu><Menu id="NISEV001003" title="特殊習慣-有無" desc="特殊習慣-有無{NIS_EV_001_022B}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_022B" ntype="B">
+<Item id="NISEV0010030" title="抽煙-每日/包" desc="抽煙-每日/包{NIS_EV_001_0222}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0222" ntype="B">
+</Item>
+<Item id="NISEV0010031" title="抽煙-已抽(年)" desc="抽煙-已抽(年){NIS_EV_001_0224}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0224" ntype="B">
+</Item>
+<Item id="NISEV0010032" title="抽煙-已戒(年)" desc="抽煙-已戒(年){NIS_EV_001_0223}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0223" ntype="B">
+</Item>
+<Item id="NISEV0010033" title="喝酒-每日(杯)" desc="喝酒-每日(杯){NIS_EV_001_0225}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0225" ntype="B">
+</Item>
+<Item id="NISEV0010034" title="喝酒-已喝(年)" desc="喝酒-已喝(年){NIS_EV_001_0226}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0226" ntype="B">
+</Item>
+<Item id="NISEV0010035" title="喝酒-已戒(年)" desc="喝酒-已戒(年){NIS_EV_001_0227}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0227" ntype="B">
+</Item>
+<Item id="NISEV0010036" title="檳榔-每日(包)" desc="檳榔-每日(包){NIS_EV_001_0229}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0229" ntype="B">
+</Item>
+<Item id="NISEV0010037" title="檳榔-已嚼(年)" desc="檳榔-已嚼(年){NIS_EV_001_0228}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0228" ntype="B">
+</Item>
+<Item id="NISEV0010038" title="檳榔-已戒(年)" desc="檳榔-已戒(年){NIS_EV_001_022A}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_022A" ntype="B">
+</Item>
+<Menu id="NISEV0010039" title="物質濫用習慣-名稱" desc="物質濫用習慣-名稱{NIS_EV_001_022C}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_022C" ntype="B">
+<Item id="NISEV00100390" title="物質濫用習慣-頻率" desc="物質濫用習慣-頻率{NIS_EV_001_022D}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_022D" ntype="B">
+</Item>
+<Item id="NISEV00100391" title="物質濫用習慣-使用幾年" desc="物質濫用習慣-使用幾年{NIS_EV_001_022E}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_022E" ntype="B">
+</Item>
+<Item id="NISEV00100392" title="物質濫用習慣-戒斷幾年" desc="物質濫用習慣-戒斷幾年{NIS_EV_001_022F}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_022F" ntype="B">
+</Item>
+</Menu>
+</Menu><Menu id="NISEV001004" title="壓瘡高危險評估" desc="壓瘡高危險評估{NIS_HI_EV_002}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_002" ntype="B">
+<Menu id="NISEV0010040" title="危險因子" desc="危險因子{NIS_HI_EV_002_01}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_002_01" ntype="B">
+<Item id="NISEV00100400" title="感覺認知" desc="感覺認知{NIS_HI_EV_002_01_01}" type="12" lov="NIS_HI_EV_002_01_01" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_002_01_01" ntype="B">
+</Item>
+<Item id="NISEV00100401" title="潮濕度" desc="潮濕度{NIS_HI_EV_002_01_02}" type="12" lov="NIS_HI_EV_002_01_02" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_002_01_02" ntype="B">
+</Item>
+<Item id="NISEV00100402" title="活動力" desc="活動力{NIS_HI_EV_002_01_03}" type="12" lov="NIS_HI_EV_002_01_03" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_002_01_03" ntype="B">
+</Item>
+<Item id="NISEV00100403" title="可動性" desc="可動性{NIS_HI_EV_002_01_04}" type="12" lov="NIS_HI_EV_002_01_04" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_002_01_04" ntype="B">
+</Item>
+<Item id="NISEV00100404" title="營養" desc="營養{NIS_HI_EV_002_01_05}" type="12" lov="NIS_HI_EV_002_01_05" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_002_01_05" ntype="B">
+</Item>
+<Item id="NISEV00100405" title="摩擦力及剪力" desc="摩擦力及剪力{NIS_HI_EV_002_01_06}" type="12" lov="NIS_HI_EV_002_01_06" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_002_01_06" ntype="B">
+</Item>
+</Menu>
+<Item id="NISEV0010041" title="總分" desc="總分{NIS_HI_EV_002_01_07}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_002_01_07" ntype="B">
+</Item>
+<Item id="NISEV0010042" title="計畫" desc="計畫{NIS_HI_EV_002_01_08}" type="12" lov="NIS_HI_EV_002_01_08" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_002_01_08" ntype="B">
+</Item>
+</Menu><Menu id="NISEV001005" title="跌倒高危險評估" desc="跌倒高危險評估{NIS_HI_EV_004}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_004" ntype="B">
+<Menu id="NISEV0010050" title="危險因子" desc="危險因子{NIS_HI_EV_004_01}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_004_01" ntype="B">
+<Item id="NISEV00100500" title="最近一年內或住院中曾發生跌倒" desc="最近一年內或住院中曾發生跌倒{NIS_HI_EV_004_01_01}" type="12" lov="NIS_EV_HI_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_004_01_01" ntype="B">
+</Item>
+<Item id="NISEV00100501" title="意識不清、躁動不安" desc="意識不清、躁動不安{NIS_HI_EV_004_01_02}" type="12" lov="NIS_EV_HI_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_004_01_02" ntype="B">
+</Item>
+<Item id="NISEV00100502" title="視覺不佳影響日常生活功能" desc="視覺不佳影響日常生活功能{NIS_HI_EV_004_01_03}" type="12" lov="NIS_EV_HI_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_004_01_03" ntype="B">
+</Item>
+<Item id="NISEV00100503" title="需經常如廁(頻尿或腹瀉)" desc="需經常如廁(頻尿或腹瀉){NIS_HI_EV_004_01_04}" type="12" lov="NIS_EV_HI_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_004_01_04" ntype="B">
+</Item>
+<Item id="NISEV00100504" title="只能短暫站立，需協助或使用輔具才可下床活動" desc="只能短暫站立，需協助或使用輔具才可下床活動{NIS_HI_EV_004_01_05}" type="12" lov="NIS_EV_HI_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_004_01_05" ntype="B">
+</Item>
+<Item id="NISEV00100505" title="下肢肌力評估：無法單腳穩定站立超過5秒" desc="下肢肌力評估：無法單腳穩定站立超過5秒{NIS_HI_EV_004_01_06}" type="12" lov="NIS_EV_HI_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_004_01_06" ntype="B">
+</Item>
+<Item id="NISEV00100506" title="使用多重(四種以上)藥物，種類含輕瀉╱利尿╱抗憂鬱╱鎮靜安眠╱降血壓╱降血糖╱抗組織胺╱嗎啡類止痛劑╱抗癲癇╱肌肉鬆弛╱麻醉劑╱抗心律不整藥物" desc="使用多重(四種以上)藥物，種類含輕瀉╱利尿╱抗憂鬱╱鎮靜安眠╱降血壓╱降血糖╱抗組織胺╱嗎啡類止痛劑╱抗癲癇╱肌肉鬆弛╱麻醉劑╱抗心律不整藥物{NIS_HI_EV_004_01_07}" type="12" lov="NIS_EV_HI_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_004_01_07" ntype="B">
+</Item>
+</Menu>
+<Item id="NISEV0010051" title="總分" desc="總分{NIS_HI_EV_004_01_08}" type="2" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_004_01_08" ntype="B">
+</Item>
+<Item id="NISEV0010052" title="計畫" desc="計畫{NIS_HI_EV_004_01_09}" type="12" lov="NIS_HI_EV_004_01_09" font="新細明體" font_size="16" color="black" height="40" obid="NIS_HI_EV_004_01_09" ntype="B">
+</Item>
+</Menu><Menu id="NISEV001006" title="出院準備服務高危險群評估" desc="出院準備服務高危險群評估{NIS_OUT_001}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_001" ntype="B">
+<Item id="NISEV0010060" title="年齡" desc="年齡{NIS_OUT_002}" type="12" lov="NIS_OUT_002" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_002" ntype="B">
+</Item>
+<Item id="NISEV0010061" title="疾病種類(慢性病)" desc="疾病種類(慢性病){NIS_OUT_003}" type="12" lov="NIS_OUT_003" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_003" ntype="B">
+</Item>
+<Item id="NISEV0010062" title="近三個月急診或住院次數(不含此次)" desc="近三個月急診或住院次數(不含此次){NIS_OUT_004}" type="12" lov="NIS_OUT_004" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_004" ntype="B">
+</Item>
+<Item id="NISEV0010063" title="居住情形/社會支持" desc="居住情形/社會支持{NIS_OUT_005}" type="12" lov="NIS_OUT_005" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_005" ntype="B">
+</Item>
+<Item id="NISEV0010064" title="認知能力" desc="認知能力{NIS_OUT_006}" type="12" lov="NIS_OUT_006" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_006" ntype="B">
+</Item>
+<Item id="NISEV0010065" title="視.聽感覺" desc="視.聽感覺{NIS_OUT_007}" type="12" lov="NIS_OUT_007" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_007" ntype="B">
+</Item>
+<Item id="NISEV0010066" title="導管留置" desc="導管留置{NIS_OUT_008}" type="12" lov="NIS_OUT_008" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_008" ntype="B">
+</Item>
+<Item id="NISEV0010067" title="活動自理能力" desc="活動自理能力{NIS_OUT_009}" type="12" lov="NIS_OUT_009" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_009" ntype="B">
+</Item>
+<Menu id="NISEV0010068" title="行為能力" desc="行為能力{NIS_OUT_010}" type="12" lov="NIS_OUT_010" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_010" ntype="B">
+<Item id="NISEV00100680" title="不適當項目" desc="不適當項目{NIS_OUT_012}" type="24" lov="NIS_OUT_012" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_012" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010069" title="日常生活功能" desc="日常生活功能{NIS_OUT_011}" type="12" lov="NIS_OUT_011" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_011" ntype="B">
+<Item id="NISEV00100690" title="依賴項目" desc="依賴項目{NIS_OUT_013}" type="24" lov="NIS_OUT_013" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_013" ntype="B">
+</Item>
+</Menu>
+<Item id="NISEV001006A" title="總分" desc="總分{NIS_OUT_SUM_001}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_OUT_SUM_001" ntype="B">
+</Item>
+</Menu><Menu id="NISEV001007" title="生理評估" desc="生理評估{NIS_EV_001_031}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_031" ntype="B">
+<Menu id="NISEV0010070" title="意識" desc="意識{NIS_EV_C001_001}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_001" ntype="B">
+<Item id="NISEV00100700" title="精神狀況" desc="精神狀況{NIS_EV_C001_0011}" type="12" lov="NIS_EV_C001_0011" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0011" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010071" title="活動" desc="活動{NIS_EV_C001_002}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_002" ntype="B">
+<Item id="NISEV00100710" title="活動力" desc="活動力{NIS_EV_C001_0022}" type="12" lov="NIS_EV_C001_0022" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0022" ntype="B">
+</Item>
+<Item id="NISEV00100711" title="工具" desc="工具{NIS_EV_C001_0021}" type="12" lov="NIS_EV_C001_0021" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0021" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010072" title="心血管" desc="心血管{NIS_EV_C001_003}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_003" ntype="B">
+<Menu id="NISEV00100720" title="水腫" desc="水腫{NIS_EV_C001_0031}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0031" ntype="B">
+<Item id="NISEV001007200" title="左上肢" desc="左上肢{NIS_EV_C001_00313}" type="12" lov="NIS_EV_C001_003121" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00313" ntype="B">
+</Item>
+<Item id="NISEV001007201" title="右上肢" desc="右上肢{NIS_EV_C001_00314}" type="12" lov="NIS_EV_C001_003121" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00314" ntype="B">
+</Item>
+<Item id="NISEV001007202" title="左下肢" desc="左下肢{NIS_EV_C001_00315}" type="12" lov="NIS_EV_C001_003121" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00315" ntype="B">
+</Item>
+<Item id="NISEV001007203" title="右下肢" desc="右下肢{NIS_EV_C001_00316}" type="12" lov="NIS_EV_C001_003121" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00316" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV00100721" title="淋巴水腫" desc="淋巴水腫{NIS_EV_C001_0032}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0032" ntype="B">
+<Item id="NISEV001007210" title="上肢(左)" desc="上肢(左){NIS_EV_C001_00323}" type="12" lov="NIS_EV_C001_003121" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00323" ntype="B">
+</Item>
+<Item id="NISEV001007211" title="上肢(右)" desc="上肢(右){NIS_EV_C001_00324}" type="12" lov="NIS_EV_C001_003121" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00324" ntype="B">
+</Item>
+<Item id="NISEV001007212" title="下肢(左)" desc="下肢(左){NIS_EV_C001_00325}" type="12" lov="NIS_EV_C001_003121" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00325" ntype="B">
+</Item>
+<Item id="NISEV001007213" title="下肢(右)" desc="下肢(右){NIS_EV_C001_00326}" type="12" lov="NIS_EV_C001_003121" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00326" ntype="B">
+</Item>
+</Menu>
+<Item id="NISEV00100722" title="四肢溫度" desc="四肢溫度{NIS_EV_C001_0033}" type="12" lov="NIS_EV_C001_0033" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0033" ntype="B">
+</Item>
+<Item id="NISEV00100723" title="唇色" desc="唇色{NIS_EV_C001_0034}" type="12" lov="NIS_EV_C001_0034" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0034" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010073" title="呼吸" desc="呼吸{NIS_EV_C001_004}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_004" ntype="B">
+<Item id="NISEV00100730" title="氧氣裝置 " desc="氧氣裝置 {NIS_EV_C001_0041}" type="14" lov="NIS_EV_C001_0041" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0041" ntype="B">
+</Item>
+<Item id="NISEV00100731" title="氧氣濃度" desc="氧氣濃度{NIS_EV_C001_0043}" type="24" lov="NIS_EV_C001_0043" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0043" ntype="B">
+</Item>
+<Item id="NISEV00100732" title="呼吸型態" desc="呼吸型態{NIS_EV_C001_0044}" type="23" lov="NIS_EV_C001_0044" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0044" ntype="B">
+</Item>
+<Item id="NISEV00100733" title="呼吸音" desc="呼吸音{NIS_EV_C001_0045}" type="23" lov="NIS_EV_C001_0045" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0045" ntype="B">
+</Item>
+<Item id="NISEV00100734" title="痰" desc="痰{NIS_EV_C001_0046}" type="12" lov="NIS_EV_C001_0046" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0046" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010074" title="腸胃" desc="腸胃{NIS_EV_C001_005}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_005" ntype="B">
+<Menu id="NISEV00100740" title="進食情況" desc="進食情況{NIS_EV_C001_0051}" type="24" lov="NIS_EV_C001_0051" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0051" ntype="B">
+<Menu id="NISEV001007400" title="管灌飲食" desc="管灌飲食{NIS_EV_C001_00513}" type="23" lov="NIS_EV_C001_00513" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00513" ntype="B">
+<Item id="NISEV0010074000" title="管灌飲食種類" desc="管灌飲食種類{NIS_EV_C001_00511}" type="23" lov="NIS_EV_C001_00511" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00511" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV001007401" title="NPO" desc="NPO{NIS_EV_C001_00514}" type="23" lov="NIS_EV_C001_00514" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00514" ntype="B">
+<Item id="NISEV0010074010" title="NPO原因" desc="NPO原因{NIS_EV_C001_00512}" type="23" lov="NIS_EV_C001_00512" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00512" ntype="B">
+</Item>
+</Menu>
+</Menu>
+<Item id="NISEV00100741" title="消化狀況" desc="消化狀況{NIS_EV_C001_0052}" type="12" lov="NIS_EV_C001_0052" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0052" ntype="B">
+</Item>
+<Item id="NISEV00100742" title="腸音" desc="腸音{NIS_EV_C001_0053}" type="12" lov="NIS_EV_C001_0053" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0053" ntype="B">
+</Item>
+<Menu id="NISEV00100743" title="腹部觸、扣診" desc="腹部觸、扣診{NIS_EV_C001_0054}" type="24" lov="NIS_EV_C001_0054" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0054" ntype="B">
+<Menu id="NISEV001007430" title="壓痛感" desc="壓痛感{NIS_EV_C001_00542}" type="12" lov="NIS_EV_C001_00542" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00542" ntype="B">
+<Item id="NISEV0010074300" title="壓痛部位" desc="壓痛部位{NIS_EV_C001_00541}" type="13" lov="NIS_EV_C001_00541" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00541" ntype="B">
+</Item>
+</Menu>
+</Menu>
+<Item id="NISEV00100744" title="解便情形" desc="解便情形{NIS_EV_C001_0055}" type="12" lov="NIS_EV_C001_0055" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0055" ntype="B">
+</Item>
+<Item id="NISEV00100745" title="食慾狀況" desc="食慾狀況{NIS_EV_C001_0056}" type="12" lov="NIS_EV_C001_0056" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0056" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010075" title="泌尿" desc="泌尿{NIS_EV_C001_006}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_006" ntype="B">
+<Item id="NISEV00100750" title="尿液顏色" desc="尿液顏色{NIS_EV_C001_0061}" type="12" lov="NIS_EV_C001_0061" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0061" ntype="B">
+</Item>
+<Item id="NISEV00100751" title="解尿方式" desc="解尿方式{NIS_EV_C001_0062}" type="23" lov="NIS_EV_C001_0062" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0062" ntype="B">
+</Item>
+<Item id="NISEV00100752" title="會陰分泌物" desc="會陰分泌物{NIS_EV_C001_0063}" type="23" lov="NIS_EV_C001_0063" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0063" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010076" title="皮膚" desc="皮膚{NIS_EV_C001_007}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_007" ntype="B">
+<Item id="NISEV00100760" title="外觀" desc="外觀{NIS_EV_C001_0071}" type="13" lov="NIS_EV_C001_0071" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0071" ntype="B">
+</Item>
+<Menu id="NISEV00100761" title="傷口" desc="傷口{NIS_EV_C001_0072}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0072" ntype="B">
+<Menu id="NISEV001007610" title="開刀" desc="開刀{NIS_EV_C001_00724}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00724" ntype="B">
+<Item id="NISEV0010076100" title="部位" desc="部位{NIS_EV_C001_007242}" type="1" lov="NIS_EV_C001_00723" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_007242" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV001007611" title="壓瘡" desc="壓瘡{NIS_EV_C001_00725}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00725" ntype="B">
+<Item id="NISEV0010076110" title="部位" desc="部位{NIS_EV_C001_007252}" type="24" lov="NIS_EV_007_01511" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_007252" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV001007612" title="管路" desc="管路{NIS_EV_C001_00726}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00726" ntype="B">
+<Item id="NISEV0010076120" title="部位" desc="部位{NIS_EV_C001_007262}" type="1" lov="NIS_EV_C001_00723" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_007262" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV001007613" title="燒燙傷" desc="燒燙傷{NIS_EV_C001_0072B}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0072B" ntype="B">
+<Item id="NISEV0010076130" title="大小" desc="大小{NIS_EV_C001_0072B1}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0072B1" ntype="B">
+</Item>
+<Item id="NISEV0010076131" title="部位" desc="部位{NIS_EV_C001_0072B2}" type="24" lov="NIS_EV_C001_007272" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0072B2" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV001007614" title="擦撞" desc="擦撞{NIS_EV_C001_00728}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00728" ntype="B">
+<Item id="NISEV0010076140" title="部位" desc="部位{NIS_EV_C001_007282}" type="1" lov="NIS_EV_C001_00723" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_007282" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV001007615" title="抓傷" desc="抓傷{NIS_EV_C001_00729}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00729" ntype="B">
+<Item id="NISEV0010076150" title="部位" desc="部位{NIS_EV_C001_007292}" type="1" lov="NIS_EV_C001_00723" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_007292" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV001007616" title="其他" desc="其他{NIS_EV_C001_0072A}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0072A" ntype="B">
+<Item id="NISEV0010076160" title="部位" desc="部位{NIS_EV_C001_0072A2}" type="1" lov="NIS_EV_C001_00723" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0072A2" ntype="B">
+</Item>
+</Menu>
+</Menu>
+<Menu id="NISEV00100762" title="A-V shunt" desc="A-V shunt{NIS_EV_C001_0073}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0073" ntype="B">
+<Item id="NISEV001007620" title="震顫長度(cm)" desc="震顫長度(cm){NIS_EV_C001_00731}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00731" ntype="B">
+</Item>
+<Item id="NISEV001007621" title="Thrill觸診強弱" desc="Thrill觸診強弱{NIS_EV_C001_00732}" type="12" lov="NIS_EV_C001_00732" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00732" ntype="B">
+</Item>
+<Item id="NISEV001007622" title="Bruit聽診音調" desc="Bruit聽診音調{NIS_EV_C001_00733}" type="12" lov="NIS_EV_C001_00733" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00733" ntype="B">
+</Item>
+<Item id="NISEV001007623" title="Bruit聽診強弱" desc="Bruit聽診強弱{NIS_EV_C001_00734}" type="12" lov="NIS_EV_C001_00732" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00734" ntype="B">
+</Item>
+</Menu>
+</Menu>
+<Menu id="NISEV0010077" title="粘膜" desc="粘膜{NIS_EV_C001_008}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_008" ntype="B">
+<Menu id="NISEV00100770" title="口腔及粘膜正常" desc="口腔及粘膜正常{NIS_EV_C001_00801}" type="12" lov="NIS_EV_C001_00801" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_00801" ntype="B">
+<Item id="NISEV001007700" title="口腔及其粘膜狀況" desc="口腔及其粘膜狀況{NIS_EV_C001_0081}" type="24" lov="NIS_EV_C001_0081" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0081" ntype="B">
+</Item>
+</Menu>
+</Menu>
+<Menu id="NISEV0010078" title="感官" desc="感官{NIS_EV_C001_009}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_009" ntype="B">
+<Menu id="NISEV00100780" title="疼痛" desc="疼痛{NIS_EV_C001_0091}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0091" ntype="B">
+<Item id="NISEV001007800" title="十分量表" desc="十分量表{NIS_EV_171}" type="12" lov="NIS_171" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_171" ntype="B">
+</Item>
+<Item id="NISEV001007801" title="臉譜量表" desc="臉譜量表{NIS_172}" type="26" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_172" ntype="B">
+</Item>
+</Menu>
+<Item id="NISEV00100781" title="自我概念" desc="自我概念{NIS_EV_C001_0092}" type="12" lov="NIS_EV_C001_0092" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0092" ntype="B">
+</Item>
+<Item id="NISEV00100782" title="焦慮" desc="焦慮{NIS_EV_C001_0093}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0093" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010079" title="引流管" desc="引流管{NIS_EV_C001_010}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_010" ntype="B">
+<Menu id="NISEV00100790" title="Chest tube" desc="Chest tube{NIS_EV_C001_0102}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0102" ntype="B">
+<Item id="NISEV001007900" title="部位" desc="部位{NIS_EV_C001_01021}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01021" ntype="B">
+</Item>
+<Item id="NISEV001007901" title="功能" desc="功能{NIS_EV_C001_01022}" type="12" lov="NIS_EV_C001_01022" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01022" ntype="B">
+</Item>
+<Item id="NISEV001007902" title="傷口性質" desc="傷口性質{NIS_EV_C001_01023}" type="12" lov="NIS_EV_C001_01023" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01023" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV00100791" title="Rubber drain" desc="Rubber drain{NIS_EV_C001_0103}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0103" ntype="B">
+<Item id="NISEV001007910" title="部位" desc="部位{NIS_EV_C001_01031}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01031" ntype="B">
+</Item>
+<Item id="NISEV001007911" title="功能" desc="功能{NIS_EV_C001_01032}" type="12" lov="NIS_EV_C001_01022" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01032" ntype="B">
+</Item>
+<Item id="NISEV001007912" title="傷口性質" desc="傷口性質{NIS_EV_C001_01033}" type="12" lov="NIS_EV_C001_01023" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01033" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV00100792" title="Penrose drain" desc="Penrose drain{NIS_EV_C001_0104}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0104" ntype="B">
+<Item id="NISEV001007920" title="部位" desc="部位{NIS_EV_C001_01041}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01041" ntype="B">
+</Item>
+<Item id="NISEV001007921" title="功能" desc="功能{NIS_EV_C001_01042}" type="12" lov="NIS_EV_C001_01022" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01042" ntype="B">
+</Item>
+<Item id="NISEV001007922" title="傷口性質" desc="傷口性質{NIS_EV_C001_01043}" type="12" lov="NIS_EV_C001_01023" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01043" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV00100793" title="Vaccum ball" desc="Vaccum ball{NIS_EV_C001_0105}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0105" ntype="B">
+<Item id="NISEV001007930" title="部位" desc="部位{NIS_EV_C001_01051}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01051" ntype="B">
+</Item>
+<Item id="NISEV001007931" title="功能" desc="功能{NIS_EV_C001_01052}" type="12" lov="NIS_EV_C001_01022" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01052" ntype="B">
+</Item>
+<Item id="NISEV001007932" title="傷口性質" desc="傷口性質{NIS_EV_C001_01053}" type="12" lov="NIS_EV_C001_01023" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01053" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV00100794" title="Hemovac" desc="Hemovac{NIS_EV_C001_0106}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0106" ntype="B">
+<Item id="NISEV001007940" title="部位" desc="部位{NIS_EV_C001_01061}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01061" ntype="B">
+</Item>
+<Item id="NISEV001007941" title="功能" desc="功能{NIS_EV_C001_01062}" type="12" lov="NIS_EV_C001_01022" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01062" ntype="B">
+</Item>
+<Item id="NISEV001007942" title="傷口性質" desc="傷口性質{NIS_EV_C001_01063}" type="12" lov="NIS_EV_C001_01023" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01063" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV00100795" title="Negaton drain" desc="Negaton drain{NIS_EV_C001_0107}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0107" ntype="B">
+<Item id="NISEV001007950" title="部位" desc="部位{NIS_EV_C001_01071}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01071" ntype="B">
+</Item>
+<Item id="NISEV001007951" title="功能" desc="功能{NIS_EV_C001_01072}" type="12" lov="NIS_EV_C001_01022" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01072" ntype="B">
+</Item>
+<Item id="NISEV001007952" title="傷口性質" desc="傷口性質{NIS_EV_C001_01073}" type="12" lov="NIS_EV_C001_01023" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01073" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV00100796" title="T-tube" desc="T-tube{NIS_EV_C001_0108}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0108" ntype="B">
+<Item id="NISEV001007960" title="部位" desc="部位{NIS_EV_C001_01081}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01081" ntype="B">
+</Item>
+<Item id="NISEV001007961" title="功能" desc="功能{NIS_EV_C001_01082}" type="12" lov="NIS_EV_C001_01022" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01082" ntype="B">
+</Item>
+<Item id="NISEV001007962" title="傷口性質" desc="傷口性質{NIS_EV_C001_01083}" type="12" lov="NIS_EV_C001_01023" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01083" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV00100797" title="其他" desc="其他{NIS_EV_C001_0109}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0109" ntype="B">
+<Item id="NISEV001007970" title="名稱" desc="名稱{NIS_EV_C001_01094}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01094" ntype="B">
+</Item>
+<Item id="NISEV001007971" title="部位" desc="部位{NIS_EV_C001_01091}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01091" ntype="B">
+</Item>
+<Item id="NISEV001007972" title="功能" desc="功能{NIS_EV_C001_01092}" type="12" lov="NIS_EV_C001_01022" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01092" ntype="B">
+</Item>
+<Item id="NISEV001007973" title="傷口性質" desc="傷口性質{NIS_EV_C001_01093}" type="12" lov="NIS_EV_C001_01023" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_01093" ntype="B">
+</Item>
+</Menu>
+</Menu>
+<Menu id="NISEV001007A" title="管路" desc="管路{NIS_EV_C001_011}" type="12" lov="NIS_EV_YN" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_011" ntype="B">
+<Item id="NISEV001007A0" title="管路種類" desc="管路種類{NIS_EV_C001_0111}" type="24" lov="NIS_EV_C001_0111" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_C001_0111" ntype="B">
+</Item>
+</Menu>
+</Menu><Menu id="NISEV001008" title="入院護理" desc="入院護理{NIS_EV_001_090}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_090" ntype="B">
+<Item id="NISEV0010080" title="項目" desc="項目{NIS_EV_001_089}" type="24" lov="NIS_EV_001_089" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_089" ntype="B">
+</Item>
+<Item id="NISEV0010081" title="貴重物品" desc="貴重物品{NIS_EV_001_026}" type="29" lov="null" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_026" ntype="B">
+</Item>
+<Item id="NISEV0010082" title="家屬確認簽章" desc="家屬確認簽章{NIS_EV_001_086}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_086" ntype="B">
+</Item>
+<Item id="NISEV0010083" title="護理人員簽章" desc="護理人員簽章{NIS_EV_001_088}" type="28" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_088" ntype="B">
+</Item>
+</Menu></Menu>
+<Menu id="MULTIPLE-00" title="連續式資料" desc="單一式資料{multiple}" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="multiple" ntype="B">
+</Menu>
+<Menu id="LAB-00" title="LAB" desc="LAB{lab}" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="lab" ntype="B">
+</Menu>
+</Menu>
+]]></COLUMN>
+		<COLUMN NAME="SIGN_TOTAL_FLAG"><![CDATA[Y]]></COLUMN>
+	</ROW>
+</RESULTS>
