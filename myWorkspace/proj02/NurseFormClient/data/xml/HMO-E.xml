@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Menu id="HMO-E0" title="root" desc="root" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="root" ntype="">
+<Menu id="SINGLE-00" title="單ㄧ式資料" desc="單一式資料{single}" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="single" ntype="B">
+<Menu id="HMO-E000" title="腹膜透析病患居家訪視評估表" desc="腹膜透析病患居家訪視評估表{HMO_E}" type="4" lov="" font="新細明體" font_size="12" color="black" height="30" obid="HMO_E" ntype="B">
+<Item id="HMO-E0000" title="家訪日期" desc="家訪日期{HMO_E_01}" type="7" lov="" font="新細明體" font_size="12" color="black" height="30" obid="HMO_E_01" ntype="B">
+</Item>
+<Item id="HMO-E0001" title="評估者" desc="評估者{HMO_E_02}" type="28" lov="" font="新細明體" font_size="12" color="black" height="30" obid="HMO_E_02" ntype="B">
+</Item>
+<Menu id="HMO-E0002" title="一、基本資料：" desc="一、基本資料：{HMO_E_A}" type="4" lov="" font="新細明體" font_size="12" color="black" height="30" obid="HMO_E_A" ntype="B">
+<Item id="HMO-E00020" title="姓名" desc="姓名{HMO_E_A_01}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_01" ntype="B">
+</Item>
+<Item id="HMO-E00021" title="性別" desc="性別{HMO_E_A_02}" type="12" lov="HMO_E_A_02" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_02" ntype="B">
+</Item>
+<Item id="HMO-E00022" title="年齡" desc="年齡{HMO_E_A_03}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_03" ntype="B">
+</Item>
+<Item id="HMO-E00023" title="體重(kg)" desc="體重(kg){HMO_E_A_04}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_04" ntype="B">
+</Item>
+<Item id="HMO-E00024" title="身高(cm)" desc="身高(cm){HMO_E_A_05}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_05" ntype="B">
+</Item>
+<Item id="HMO-E00025" title="地址" desc="地址{HMO_E_A_06}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_06" ntype="B">
+</Item>
+<Item id="HMO-E00026" title="聯絡電話" desc="聯絡電話{HMO_E_A_07}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_07" ntype="B">
+</Item>
+<Item id="HMO-E00027" title="就診院所" desc="就診院所{HMO_E_A_08}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_08" ntype="B">
+</Item>
+<Item id="HMO-E00028" title="病歷號碼" desc="病歷號碼{HMO_E_A_09}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_09" ntype="B">
+</Item>
+<Item id="HMO-E00029" title="其他病史" desc="其他病史{HMO_E_A_10}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_10" ntype="B">
+</Item>
+<Menu id="HMO-E0002A" title="腹模透析起始日" desc="腹模透析起始日{HMO_E_A_11}" type="7" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_11" ntype="B">
+<Item id="HMO-E0002A0" title="曾接受血液透析" desc="曾接受血液透析{HMO_E_A_12}" type="23" lov="HMO_E_A_11" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_12" ntype="B">
+</Item>
+</Menu>
+<Item id="HMO-E0002B" title="使用的換液系統" desc="使用的換液系統{HMO_E_A_13}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_13" ntype="B">
+</Item>
+<Item id="HMO-E0002C" title="透析處方" desc="透析處方{HMO_E_A_14}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_14" ntype="B">
+</Item>
+<Item id="HMO-E0002D" title="時間/量" desc="時間/量{HMO_E_A_15}" type="24" lov="HMO_E_A_15" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_15" ntype="B">
+</Item>
+<Item id="HMO-E0002E" title="透析液鈣離子濃度" desc="透析液鈣離子濃度{HMO_E_A_16}" type="12" lov="HMO_E_A_16" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_16" ntype="B">
+</Item>
+<Menu id="HMO-E0002F" title="濃度/容量" desc="濃度/容量{HMO_E_A_17}" type="4" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_17" ntype="B">
+<Item id="HMO-E0002F0" title="1.5%" desc="1.5%{HMO_E_A_17_1}" type="24" lov="HMO_E_A_17_1" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_17_1" ntype="B">
+</Item>
+<Item id="HMO-E0002F1" title="2.5%" desc="2.5%{HMO_E_A_17_2}" type="24" lov="HMO_E_A_17_2" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_17_2" ntype="B">
+</Item>
+<Item id="HMO-E0002F2" title="4.25%" desc="4.25%{HMO_E_A_17_3}" type="24" lov="HMO_E_A_17_3" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_17_3" ntype="B">
+</Item>
+<Item id="HMO-E0002F3" title="1.5%" desc="1.5%{HMO_E_A_17_4}" type="24" lov="HMO_E_A_17_4" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_17_4" ntype="B">
+</Item>
+<Item id="HMO-E0002F4" title="2.5%" desc="2.5%{HMO_E_A_17_5}" type="24" lov="HMO_E_A_17_5" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_17_5" ntype="B">
+</Item>
+<Item id="HMO-E0002F5" title="Extraneal 7.5%" desc="Extraneal 7.5%{HMO_E_A_17_6}" type="24" lov="HMO_E_A_17_6" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_17_6" ntype="B">
+</Item>
+<Item id="HMO-E0002F6" title="1.1%N" desc="1.1%N{HMO_E_A_17_7}" type="24" lov="HMO_E_A_17_7" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_17_7" ntype="B">
+</Item>
+</Menu>
+<Menu id="HMO-E0002G" title="其他" desc="其他{HMO_E_A_18}" type="4" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18" ntype="B">
+<Item id="HMO-E0002G0" title="1.腹膜炎" desc="1.腹膜炎{HMO_E_A_18_1}" type="23" lov="HMO_E_A_18_1" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18_1" ntype="B">
+</Item>
+<Item id="HMO-E0002G1" title="2.出口感染" desc="2.出口感染{HMO_E_A_18_2}" type="23" lov="HMO_E_A_18_2" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18_2" ntype="B">
+</Item>
+<Item id="HMO-E0002G2" title="3.隧道感染" desc="3.隧道感染{HMO_E_A_18_3}" type="23" lov="HMO_E_A_18_3" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18_3" ntype="B">
+</Item>
+<Menu id="HMO-E0002G3" title="4.換液操作者" desc="4.換液操作者{HMO_E_A_18_4}" type="23" lov="HMO_E_A_18_4" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18_4" ntype="B">
+<Item id="HMO-E0002G30" title="換液操作者之年齡" desc="換液操作者之年齡{HMO_E_A_18_4_A}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18_4_A" ntype="B">
+</Item>
+<Item id="HMO-E0002G31" title="換液所需時間_CAPD" desc="換液所需時間_CAPD{HMO_E_A_18_4_B}" type="23" lov="HMO_E_A_18_4_B" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18_4_B" ntype="B">
+</Item>
+<Item id="HMO-E0002G32" title="換液所需時間_APD" desc="換液所需時間_APD{HMO_E_A_18_4_C}" type="23" lov="HMO_E_A_18_4_C" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18_4_C" ntype="B">
+</Item>
+</Menu>
+<Item id="HMO-E0002G4" title="5.透析液加溫方法" desc="5.透析液加溫方法{HMO_E_A_18_5}" type="23" lov="HMO_E_A_18_5" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18_5" ntype="B">
+</Item>
+<Item id="HMO-E0002G5" title="6.透析液加藥狀況" desc="6.透析液加藥狀況{HMO_E_A_18_6}" type="23" lov="HMO_E_A_18_6" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18_6" ntype="B">
+</Item>
+<Item id="HMO-E0002G6" title="7.DM患者血糖測量情形" desc="7.DM患者血糖測量情形{HMO_E_A_18_7}" type="23" lov="HMO_E_A_18_7" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18_7" ntype="B">
+</Item>
+<Item id="HMO-E0002G7" title="8.家中醫療配備" desc="8.家中醫療配備{HMO_E_A_18_8}" type="23" lov="HMO_E_A_18_8" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_A_18_8" ntype="B">
+</Item>
+</Menu>
+</Menu>
+<Menu id="HMO-E0003" title="二、目前情況：" desc="二、目前情況：{HMO_E_B}" type="4" lov="" font="新細明體" font_size="12" color="black" height="30" obid="HMO_E_B" ntype="B">
+<Item id="HMO-E00030" title="1.行動程度：" desc="1.行動程度：{HMO_E_B_01}" type="24" lov="HMO_E_B_01" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_B_01" ntype="B">
+</Item>
+<Item id="HMO-E00031" title="2.意識狀態：" desc="2.意識狀態：{HMO_E_B_02}" type="24" lov="HMO_E_B_02" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_B_02" ntype="B">
+</Item>
+<Item id="HMO-E00032" title="3.不適症狀：" desc="3.不適症狀：{HMO_E_B_03}" type="24" lov="HMO_E_B_03" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_B_03" ntype="B">
+</Item>
+<Menu id="HMO-E00033" title="4.血壓(mmHg)：" desc="4.血壓(mmHg)：{HMO_E_B_04}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_B_04" ntype="B">
+<Item id="HMO-E000330" title="量" desc="量{HMO_E_B_04_01}" type="23" lov="HMO_E_B_04_1" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_B_04_01" ntype="B">
+</Item>
+</Menu>
+<Menu id="HMO-E00034" title="5.體重(Kg)：" desc="5.體重(Kg)：{HMO_E_B_05}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_B_05" ntype="B">
+<Item id="HMO-E000340" title="量" desc="量{HMO_E_B_05_01}" type="23" lov="HMO_E_B_05_1" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_B_05_01" ntype="B">
+</Item>
+</Menu>
+</Menu>
+<Menu id="HMO-E0004" title="三、患者社會身心狀況評估：" desc="三、患者社會身心狀況評估：{HMO_E_C}" type="4" lov="" font="新細明體" font_size="12" color="black" height="30" obid="HMO_E_C" ntype="B">
+<Item id="HMO-E00040" title="1. 患者心理適應狀況：" desc="1. 患者心理適應狀況：{HMO_E_C_01}" type="23" lov="HMO_E_C_01" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_C_01" ntype="B">
+</Item>
+<Item id="HMO-E00041" title="2. 情緒支持來源：" desc="2. 情緒支持來源：{HMO_E_C_02}" type="23" lov="HMO_E_C_02" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_C_02" ntype="B">
+</Item>
+<Item id="HMO-E00042" title="3. 生活中最大困擾：" desc="3. 生活中最大困擾：{HMO_E_C_03}" type="23" lov="HMO_E_C_03" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_C_03" ntype="B">
+</Item>
+<Item id="HMO-E00043" title="4. 家屬接受程度：" desc="4. 家屬接受程度：{HMO_E_C_04}" type="23" lov="HMO_E_C_04" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_C_04" ntype="B">
+</Item>
+<Item id="HMO-E00044" title="5. 工作情形：" desc="5. 工作情形：{HMO_E_C_05}" type="23" lov="HMO_E_C_05" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_C_05" ntype="B">
+</Item>
+<Item id="HMO-E00045" title="6. 一般狀況：" desc="6. 一般狀況：{HMO_E_C_06}" type="23" lov="HMO_E_C_06" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_C_06" ntype="B">
+</Item>
+<Item id="HMO-E00046" title="7. 與家人互動關係：" desc="7. 與家人互動關係：{HMO_E_C_07}" type="23" lov="HMO_E_C_07" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_C_07" ntype="B">
+</Item>
+<Item id="HMO-E00047" title="8. 睡眠習慣：" desc="8. 睡眠習慣：{HMO_E_C_08}" type="23" lov="HMO_E_C_08" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_C_08" ntype="B">
+</Item>
+<Item id="HMO-E00048" title="9. 運動：" desc="9. 運動：{HMO_E_C_09}" type="23" lov="HMO_E_C_09" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_C_09" ntype="B">
+</Item>
+<Item id="HMO-E00049" title="10. 飲食：" desc="10. 飲食：{HMO_E_C_10}" type="23" lov="HMO_E_C_10" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_C_10" ntype="B">
+</Item>
+<Item id="HMO-E0004A" title="11. 排便情形：" desc="11. 排便情形：{HMO_E_C_11}" type="23" lov="HMO_E_C_11" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_C_11" ntype="B">
+</Item>
+</Menu>
+<Menu id="HMO-E0005" title="四、服藥遵從性：" desc="四、服藥遵從性：{HMO_E_D}" type="4" lov="" font="新細明體" font_size="12" color="black" height="30" obid="HMO_E_D" ntype="B">
+<Item id="HMO-E00050" title="1. 健康食品補充：" desc="1. 健康食品補充：{HMO_E_D_01}" type="23" lov="HMO_E_D_01" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_01" ntype="B">
+</Item>
+<Item id="HMO-E00051" title="2. 營養補充品：" desc="2. 營養補充品：{HMO_E_D_02}" type="23" lov="HMO_E_D_02" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_02" ntype="B">
+</Item>
+<Item id="HMO-E00052" title="3. 服用中藥：" desc="3. 服用中藥：{HMO_E_D_03}" type="23" lov="HMO_E_D_03" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_03" ntype="B">
+</Item>
+<Menu id="HMO-E00053" title="4. 服藥情形：" desc="4. 服藥情形：{HMO_E_D_04}" type="4" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_04" ntype="B">
+<Item id="HMO-E000530" title="(1)認識藥物：" desc="(1)認識藥物：{HMO_E_D_04_1}" type="23" lov="HMO_E_D_04_1" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_04_1" ntype="B">
+</Item>
+<Item id="HMO-E000531" title="(2)藥物庫存：" desc="(2)藥物庫存：{HMO_E_D_04_2}" type="23" lov="HMO_E_D_04_2" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_04_2" ntype="B">
+</Item>
+<Item id="HMO-E000532" title="(3)降壓種類：" desc="(3)降壓種類：{HMO_E_D_04_3}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_04_3" ntype="B">
+</Item>
+</Menu>
+<Menu id="HMO-E00054" title="5. 降血糖種類：" desc="5. 降血糖種類：{HMO_E_D_05}" type="4" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_05" ntype="B">
+<Menu id="HMO-E000540" title="口服：" desc="口服：{HMO_E_D_05_1}" type="1" lov="" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_05_1" ntype="B">
+<Item id="HMO-E0005400" title="　" desc="　{HMO_E_D_05_1_A}" type="23" lov="HMO_E_D_05_1_A" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_05_1_A" ntype="B">
+</Item>
+</Menu>
+<Menu id="HMO-E000541" title="注射：" desc="注射：{HMO_E_D_05_2}" type="23" lov="HMO_E_D_05_2" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_05_2" ntype="B">
+<Item id="HMO-E0005410" title="輪流部位" desc="輪流部位{HMO_E_D_05_2_A}" type="23" lov="HMO_E_D_05_2_A" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_05_2_A" ntype="B">
+</Item>
+</Menu>
+</Menu>
+<Menu id="HMO-E00055" title="6. 降磷藥品名稱：" desc="6. 降磷藥品名稱：{HMO_E_D_06}" type="23" lov="HMO_E_D_06" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_06" ntype="B">
+<Item id="HMO-E000550" title="服用方式：" desc="服用方式：{HMO_E_D_06_1}" type="23" lov="HMO_E_D_06_1" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_06_1" ntype="B">
+</Item>
+</Menu>
+<Item id="HMO-E00056" title="7. 攝取高磷食物量多時：" desc="7. 攝取高磷食物量多時：{HMO_E_D_07}" type="23" lov="HMO_E_D_07" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_07" ntype="B">
+</Item>
+<Item id="HMO-E00057" title="8. 口服藥過量庫存：" desc="8. 口服藥過量庫存：{HMO_E_D_08}" type="23" lov="HMO_E_D_08" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_08" ntype="B">
+</Item>
+<Item id="HMO-E00058" title="9. 按時服用降血壓藥：" desc="9. 按時服用降血壓藥：{HMO_E_D_09}" type="23" lov="HMO_E_D_09" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_09" ntype="B">
+</Item>
+<Item id="HMO-E00059" title="10. 按時注射EPO：" desc="10. 按時注射EPO：{HMO_E_D_10}" type="23" lov="HMO_E_D_10" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_10" ntype="B">
+</Item>
+<Item id="HMO-E0005A" title="11. 按時服用Vit D3：" desc="11. 按時服用Vit D3：{HMO_E_D_11}" type="23" lov="HMO_E_D_11" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_11" ntype="B">
+</Item>
+<Item id="HMO-E0005B" title="12. 按時服用降血脂藥：" desc="12. 按時服用降血脂藥：{HMO_E_D_12}" type="23" lov="HMO_E_D_12" font="新細明體" font_size="12" color="black" height="40" obid="HMO_E_D_12" ntype="B">
+</Item>
+</Menu>
+</Menu></Menu>
+<Menu id="MULTIPLE-00" title="連續式資料" desc="連續式資料{multiple}" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="multiple" ntype="B">
+</Menu>
+<Menu id="LAB-00" title="LAB" desc="LAB{lab}" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="lab" ntype="B">
+</Menu>
+</Menu>
