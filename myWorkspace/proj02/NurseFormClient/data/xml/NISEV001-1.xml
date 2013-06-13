@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Menu id="NISEV0010" title="root" desc="root" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="root" ntype="">
+<Menu id="SINGLE-00" title="單ㄧ式資料" desc="單一式資料{single}" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="single" ntype="B">
+<Menu id="NISEV001000" title="基本資料" desc="基本資料{NIS_EV_001_H}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_H" ntype="B">
+<Item id="NISEV0010000" title="入院方式" desc="入院方式{NIS_EV_001_001}" type="23" lov="NIS_EV_001_001" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_001" ntype="B">
+</Item>
+<Item id="NISEV0010001" title="入住病房時間" desc="入住病房時間{NIS_EV_001_095}" type="9" lov="" font="新細明體" font_size="16" color="black" height="40" obid="LovDateTime" ntype="B">
+</Item>
+<Item id="NISEV0010002" title="入院診斷" desc="入院診斷{NIS_EV_001_096}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_096" ntype="B">
+</Item>
+<Item id="NISEV0010003" title="病人來源" desc="病人來源{NIS_EV_001_002}" type="23" lov="NIS_EV_001_002" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_002" ntype="B">
+</Item>
+<Item id="NISEV0010004" title="主要語言" desc="主要語言{NIS_EV_001_003}" type="24" lov="NIS_EV_001_003" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_003" ntype="B">
+</Item>
+<Item id="NISEV0010005" title="婚姻狀況" desc="婚姻狀況{NIS_EV_001_004}" type="12" lov="NIS_EV_001_004" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_004" ntype="B">
+</Item>
+<Item id="NISEV0010006" title="教育程度" desc="教育程度{NIS_EV_001_005}" type="12" lov="NIS_EV_001_005" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_005" ntype="B">
+</Item>
+<Item id="NISEV0010007" title="宗教" desc="宗教{NIS_EV_001_006}" type="23" lov="NIS_EV_001_006" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_006" ntype="B">
+</Item>
+<Menu id="NISEV0010008" title="月經史" desc="月經史{NIS_EV_001_007}" type="12" lov="NISEV001007" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_007" ntype="B">
+<Item id="NISEV00100080" title="LMP(日期)" desc="LMP(日期){NIS_EV_001_050}" type="7" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_050" ntype="B">
+</Item>
+</Menu>
+<Menu id="NISEV0010009" title="自述血型" desc="自述血型{NIS_EV_001_021}" type="12" lov="NIS_EV_001_021" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_021" ntype="B">
+<Item id="NISEV00100090" title="RH" desc="RH{NIS_EV_001_0211}" type="12" lov="NIS_EV_005_0081" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0211" ntype="B">
+</Item>
+<Item id="NISEV00100091" title="輸血反應" desc="輸血反應{NIS_EV_001_0212}" type="12" lov="NIS_EV_001_0212" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_0212" ntype="B">
+</Item>
+</Menu>
+<Item id="NISEV001000A" title="主訴/入院原因" desc="主訴/入院原因{NIS_EV_001_091}" type="5" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_091" ntype="B">
+</Item>
+</Menu><Menu id="NISEV001008" title="入院護理" desc="入院護理{NIS_EV_001_090}" type="4" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_090" ntype="B">
+<Item id="NISEV0010080" title="項目" desc="項目{NIS_EV_001_089}" type="24" lov="NIS_EV_001_089" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_089" ntype="B">
+</Item>
+<Item id="NISEV0010081" title="貴重物品" desc="貴重物品{NIS_EV_001_026}" type="29" lov="null" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_026" ntype="B">
+</Item>
+<Item id="NISEV0010082" title="家屬確認簽章" desc="家屬確認簽章{NIS_EV_001_086}" type="1" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_086" ntype="B">
+</Item>
+<Item id="NISEV0010083" title="護理人員簽章" desc="護理人員簽章{NIS_EV_001_088}" type="28" lov="" font="新細明體" font_size="16" color="black" height="40" obid="NIS_EV_001_088" ntype="B">
+</Item>
+</Menu></Menu>
+<Menu id="MULTIPLE-00" title="連續式資料" desc="單一式資料{multiple}" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="multiple" ntype="B">
+</Menu>
+<Menu id="LAB-00" title="LAB" desc="LAB{lab}" type="string" lov="" font="新細明體" font_size="14" color="black" height="30" obid="lab" ntype="B">
+</Menu>
+</Menu>
