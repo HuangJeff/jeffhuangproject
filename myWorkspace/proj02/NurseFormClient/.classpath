@@ -8,5 +8,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/jaxen-1.1-beta-6.jar"/>
+	<classpathentry kind="lib" path="lib/jide-grids.jar"/>
+	<classpathentry kind="lib" path="lib/jide.jar"/>
+	<classpathentry kind="lib" path="lib/jide-common.jar"/>
 	<classpathentry kind="output" path="classes"/>
 </classpath>
