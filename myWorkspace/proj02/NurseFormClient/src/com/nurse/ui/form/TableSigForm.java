@@ -6,6 +6,11 @@ package com.nurse.ui.form;
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
 
+import com.jidesoft.grid.TableScrollPane;
+import com.jidesoft.grid.TreeTableModel;
+import com.jidesoft.plaf.LookAndFeelFactory;
+import com.jidesoft.utils.Lm;
+
 import java.awt.*;
 /**
  * @author test
@@ -18,18 +23,38 @@ public class TableSigForm extends JPanel {
 	 * 
 	 */
 	public TableSigForm() {
-		//塞值方式二：TableModel
-		JTable table = new JTable(new MyTableModel());
+		try {
+			//要注冊，否則一直會有訊息Box出現
+			Lm.verifyLicense("Hong Cheng International Technology Inc.",
+	    			"TBD", "hJyPaSzoW2D7GROHaDVAsTLJee0t8EC");
+	        LookAndFeelFactory.installDefaultLookAndFeelAndExtension();
+			
+			//塞值方式二：TableModel
+//			JTable table = new JTable(new MyTableModel());
+//			JScrollPane scrollPane = new JScrollPane(table);
+//			this.add(scrollPane, BorderLayout.CENTER);
+			
+			this.add(this.createTable(), BorderLayout.CENTER);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 建立 TableScrollPane 物件<br>
+	 * TableScrollPane = JTable + JScrollPane
+	 * @return TableScrollPane 物件
+	 * @throws Exception
+	 */
+	public TableScrollPane createTable() throws Exception {
+		TableScrollPane tableScrollPane = new TableScrollPane(new MyTableModel(), true);
 		
-		
-		JScrollPane scrollPane = new JScrollPane(table);
-		this.add(scrollPane, BorderLayout.CENTER);
+		return tableScrollPane;
 	}
 	
 	
-	
-	
-	class MyTableModel extends AbstractTableModel {
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	class MyTableModel extends TreeTableModel {
 		private String[] columnNames = {"First Name",
 				"Last Name",
 				"Sport",
