@@ -2,14 +2,14 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar">
+	<classpathentry kind="lib" path="D:/0.jeff/library/dom4j/dom4j-1.6.1.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="http://dom4j.sourceforge.net/dom4j-1.6.1/apidocs/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/jaxen-1.1-beta-6.jar"/>
-	<classpathentry kind="lib" path="lib/jide-grids.jar"/>
-	<classpathentry kind="lib" path="lib/jide.jar"/>
-	<classpathentry kind="lib" path="lib/jide-common.jar"/>
+	<classpathentry kind="lib" path="D:/0.jeff/library/dom4j/jaxen-1.1-beta-6.jar"/>
+	<classpathentry kind="lib" path="D:/0.jeff/library/jidesoft/jide-grids.jar"/>
+	<classpathentry kind="lib" path="D:/0.jeff/library/jidesoft/oss-3.5.2 AllLib/jide.jar"/>
+	<classpathentry kind="lib" path="D:/0.jeff/library/jidesoft/jide-common.jar"/>
 	<classpathentry kind="output" path="classes"/>
 </classpath>
