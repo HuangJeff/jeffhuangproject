@@ -1,3 +1,8 @@
-â˜…å‹•æ…‹è­·ç†è¡¨å–®å°ˆæ¡ˆâ˜…
+¡¹°ÊºAÅ@²zªí³æ±M®×¡¹
 1.Created : 2014/10/27 Jeff
+2.RUN IDE
+Eclipse IDE for Java Developers
+Version: Juno Service Release 2
+
+
 
