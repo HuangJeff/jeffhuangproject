@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faceted-project>
-  <runtime name="Tomcat v7.0 Server at localhost - WebTestProject"/>
+  <runtime name="Tomcat v7.0 Server at localhost - WT"/>
   <fixed facet="wst.jsdt.web"/>
   <fixed facet="java"/>
   <fixed facet="jst.web"/>
