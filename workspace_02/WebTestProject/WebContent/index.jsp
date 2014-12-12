@@ -35,6 +35,22 @@
 		</tr>
 		<tr>
 			<td>
+				測試Table中的彈跳視窗
+			</td>
+			<td>
+				<a href="./testPopupWin/TablePopupWin.jsp">連結....</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<br>
+			</td>
+			<td>
+		
+			</td>
+		</tr>
+		<tr>
+			<td>
 				<br>
 			</td>
 			<td>
