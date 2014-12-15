@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>This AJAX Test</title>
+
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+  <script type="text/javascript">
+  	  $(document).ready(function(){
+	    $("#b01").click(function(){
+	      //alert("123");
+	      //htmlobj=$.ajax({url:"/ajax_txt/test1.txt",async:false});
+	      
+	      //work
+	      //htmlobj=$.ajax({url:"ajax_txt/test1.txt",async:false});
+	      
+	      //work
+	      htmlobj=$.ajax({url:"../jQuery/ajax_txt/test2.txt",async:false});
+	      alert(htmlobj + '\n' + htmlobj.responseText);
+	      $("#myDiv").html(htmlobj.responseText);
+	    });
+	  });
+  </script>
+</head>
+
+<body>
+  <div id="myDiv">
+    <h2>Let AJAX change this text</h2>
+  </div>
+  <button id="b01" type="button">
+    Change Content
+  </button>
+</body>
+</html>

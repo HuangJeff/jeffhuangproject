@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sample for Updating the product information</title>
+
+<!-- 步驟一、在使用TPRS推薦API的頁面上引用 tprs.js 與 jquery-1.8.0.min.js -->
+<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="tprs-2.0.js"></script> 
+
+<script>
+	//var cid = "A_123456789"; //系統給定的公司帳號
+	//var acctId = "admin"; //系統給定的使用者帳號
+	//var campaignId = "A_1412092151169"; //系統給定的活動代碼
+	var cid = "root"; //系統給定的公司帳號
+	var acctId = "root"; //系統給定的使用者帳號
+	var campaignId = "A_1409251013132"; //系統給定的活動代碼
+	
+	var tprs = new TrsApi(cid,acctId,campaignId);
+	
+	function updateProduct(){
+		var itemId = "101";
+		var mainCate = "A";
+		var middleCate = "AB";
+		var endCate = "ABC";
+		var itemName = "華碩筆電";
+		var newItem = "0";
+		var outDate = "";
+		var priority = null;
+		var attributes = null;
+		var listPrice = "1000";
+		var specialPrice = "800";
+		var itemUrl = "";
+		var imgUrl = "";
+		var stock = "10";
+		alert("1.campaignId = " + campaignId);
+		tprs.product(itemId,mainCate,middleCate,endCate,itemName,newItem,outDate,priority,attributes,listPrice,specialPrice,itemUrl,imgUrl,stock);
+		alert("2.campaignId = " + campaignId);
+	}
+</script>
+
+
+
+</head>
+<body>
+
+
+<H1> This sample shows how to upadte the product information</H1>
+
+This HTML file could not be executed on your local file system, please run it from a web server. <br/>
+無法在local端用瀏覽器打開檔案方式執行,請放置於web server上測試<br/>
+<br/>
+<a href="javascript:updateProduct();">Click me to simulate Updating the product data</a>
+
+</body>
+</html>

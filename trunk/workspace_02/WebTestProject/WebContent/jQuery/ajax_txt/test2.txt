@@ -1,0 +1,5 @@
+This is test2.txt
+
+AJAX is not a programming language.
+\n
+It is just a technique for creating better and more interactive web applications.
