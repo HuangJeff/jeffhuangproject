@@ -6,7 +6,8 @@
  * 本程式為TPRS智能推薦系統的瀏覽器端javascript串接函式庫
  ***************************************************************************/
 	 
-var tprs_server_url = "http://localhost/trs"; //修改為實際TPRS server位置
+//var tprs_server_url = "http://localhost/trs"; //修改為實際TPRS server位置
+var tprs_server_url = "http://192.168.1.88/trs";
 var debug = false;
 
 function TrsApi(cid,acctId,campaignId) {
@@ -15,7 +16,7 @@ function TrsApi(cid,acctId,campaignId) {
 	var ptsua = acctId;
 	var ptsmd = campaignId;	
 	var ajax_content_type = "application/x-www-form-urlencoded;charset=utf-8";
-	
+	alert("--init--" + cid + " : " + acctId + " -- " + campaignId);
 	/******************************************
 	 * Feedback log
 	 *******************************************/
@@ -39,15 +40,15 @@ function TrsApi(cid,acctId,campaignId) {
 	 * imgUrl: 圖片url
 	 * stock: 庫存量
 	 * --------------------------------------------------
-	 */		
+	 */
 	this.product = function(itemId,mainCate,middleCate,endCate,itemName,newItem,outDate,priority,attributes,listPrice,specialPrice,itemUrl,imgUrl,stock) {
-		
+		alert("itemName : " + itemName + " -campaignId- " + campaignId);
 		mainCate = encodeURI(mainCate);
 		middleCate = encodeURI(middleCate);
 		endCate = encodeURI(endCate);
 		attributes = encodeURI(attributes);
 		itemName = encodeURI(itemName);
-		alert("itemName : " + itemName);
+		
 		$.ajax({
 			type: "post",
 			contentType: ajax_content_type,

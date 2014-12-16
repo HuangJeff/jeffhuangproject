@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+	event.preventDefault() 方法觸發或取消事件預設發生情況。
+	
+	瀏覽器 (broswer) 開啟，點擊 Prevent 後，事件的預設發生情況就會被抑制，因此無法選擇 Checkbox
+-->
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function init(event) {
+	    show(event);
+	}
+	 
+	function show(event) {
+	    var s1 = document.getElementById("show1");
+	    s1.innerHTML = event.defaultPrevented;
+	    var s2 = document.getElementById("show2");
+	    s2.innerHTML = event.cancelable;
+	}
+	
+	/*
+	此例在 preventDef() 函數 (function) 中呼叫 preventDefault()
+	*/
+	function preventDef(event) {
+	    event.preventDefault();
+	    show(event);
+	}
+	 
+	function run1(event) {
+	    var t = document.getElementById("checkbox");
+	    t.addEventListener("click", preventDef, false);
+	}
+	 
+	function run2(event) {
+	    var t = document.getElementById("checkbox");
+	    t.removeEventListener("click", preventDef, false);
+	    show(event);
+	}
+</script>
+</head>
+<body onload="init(event);">
+  <table>
+  	<tr>
+  		<td><input type="checkbox" id="checkbox"/>
+    		<label for="checkbox">Checkbox</label>
+    	</td>
+    <tr>
+  	<tr>
+  		<td>
+				<input type="button" value="Prevent" onclick="run1(event);">
+		</td>
+	<tr>
+	<tr>
+		<td>
+			<input type="button" value="Cancel" onclick="run2(event);">
+		</td>
+	<tr>
+  </table>
+	<div>defaultPrevented: <span id="show1"></span></div>
+	<div>cancelable: <span id="show2"></span></div>
+</body>
+</html>
