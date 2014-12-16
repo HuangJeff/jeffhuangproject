@@ -12,11 +12,16 @@
 	      //alert("123");
 	      //htmlobj=$.ajax({url:"/ajax_txt/test1.txt",async:false});
 	      
+	      //最简单的情况下，$.ajax() 可以不带任何参数直接使用。
+	      
 	      //work
 	      //htmlobj=$.ajax({url:"ajax_txt/test1.txt",async:false});
 	      
 	      //work
-	      htmlobj=$.ajax({url:"../jQuery/ajax_txt/test2.txt",async:false});
+	      htmlobj = $.ajax({
+	    	  					url:"../jQuery/ajax_txt/test2.txt",
+	    	  					async:false	//默认值: true。默认设置下，所有请求均为异步请求。
+	    	  				});
 	      alert(htmlobj + '\n' + htmlobj.responseText);
 	      $("#myDiv").html(htmlobj.responseText);
 	    });

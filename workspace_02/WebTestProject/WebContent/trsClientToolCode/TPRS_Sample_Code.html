@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sample for Updating the product information</title>
+
+<!-- 步驟一、在使用TPRS推薦API的頁面上引用 tprs.js 與 jquery-1.8.0.min.js -->
+<!-- <script type="text/javascript" src="jquery-1.8.0.min.js"></script> -->
+<!-- 使用jQuery網站上提供的Library，避免太多js -->
+<script src="//code.jquery.com/jquery-2.1.1.js"></script>
+
+<script type="text/javascript" src="tprs-2.1.js"></script> 
+
+<script>
+	var cid = "root"; //系統給定的公司帳號
+	var acctId = "root"; //系統給定的使用者帳號
+	var campaignId = "A_1412160914319"; //系統給定的活動代碼
+	
+	var tprs = new TrsApi(cid,acctId,campaignId);
+	
+	/*
+	 * 更新商品資料
+	 * 參數說明:
+	 * -------------------------------------------------
+	 * itemId : 商品編號
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * itemName : 商品名稱
+	 * newItem : 新品標示,"0" 或 "1"("1"表示新品) 
+	 * outDate: 到期日 YYYYMMDD 
+	 * priority: 優先序(數字) 
+	 * attributes: 附加屬性,最多10個,以','隔開
+	 * listPrice: 定價
+	 * specialPrice: 優惠價
+	 * itemUrl: 商品url
+	 * imgUrl: 圖片url
+	 * stock: 庫存量
+	 * --------------------------------------------------
+	 */
+	function updateProduct(){
+		var itemId = "102";
+		var mainCate = "A";
+		var middleCate = "AB";
+		var endCate = "ABC";
+		var itemName = "天龍筆電(TLong)";
+		var newItem = "0";
+		var outDate = "";
+		var priority = null;
+		var attributes = null;
+		var listPrice = "1400";
+		var specialPrice = "820";
+		var itemUrl = "";
+		var imgUrl = "";
+		var stock = "10";
+		alert("==start updateProduct AJAX==" + campaignId + " itemId:" + itemId);
+		tprs.product(itemId,mainCate,middleCate,endCate,itemName,newItem,outDate,priority,attributes,listPrice,specialPrice,itemUrl,imgUrl,stock);
+		alert("==The End==");
+	}
+	
+	 
+	 	/*
+		 * 紀錄Click Log
+		 * 參數說明:
+		 * -------------------------------------------------
+		 * userId : 使用者代號
+		 * itemId : 商品編號
+		 * isTRS : 此click是否因為TRS推薦, "Y" or "N" (預設為N)
+		 * page : 此click所屬網頁名稱
+		 * mainCate : 大類
+		 * middleCate : 中類
+		 * endCate : 小類
+		 * --------------------------------------------------
+		 */
+		 function createClickLog(){
+			 	var userId = "11";
+			 	var itemId = "102";
+			 	var isTRS = "N";
+			 	var page = "page3";
+				var mainCate = "A";
+				var middleCate = "AB";
+				var endCate = "ABC";
+				alert("==start ClickLog AJAX==" + campaignId + " userId:" + userId);
+				tprs.click(userId,itemId,isTRS,page,mainCate,middleCate,endCate);
+				alert("==The End==");
+		 }
+	 	
+	 	/*
+		 * 紀錄Buy Log
+		 * 參數說明:
+		 * -------------------------------------------------
+		 * userId : 使用者代號
+		 * itemId : 商品編號
+		 * quantity : 購買數量
+		 * --------------------------------------------------
+		 */
+		 function createBuyLog(){
+			 var userId = "12";
+			 	var itemId = "101";
+			 	var quantity = 2;
+				alert("==start BuyLog AJAX==" + campaignId + " userId:" + userId);
+				tprs.buy(userId,itemId,quantity);
+				alert("==The End==");
+		 }
+	 	
+	
+</script>
+
+
+
+</head>
+
+<body>
+<H1> This sample shows how to upadte the product information</H1>
+This HTML file could not be executed on your local file system, please run it from a web server. <br/>
+無法在local端用瀏覽器打開檔案方式執行,請放置於web server上測試<br/>
+<br/>
+<a href="javascript:updateProduct();">Click me to simulate Updating the product data</a>
+<br/><br/>
+<a href="javascript:createClickLog();">Click Log</a>
+<br/><br/>
+<a href="javascript:createBuyLog();">Buy Log</a>
+<br/><br/>
+
+</body>
+</html>

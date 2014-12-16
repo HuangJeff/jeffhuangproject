@@ -5,41 +5,32 @@
 <title>Sample for Updating the product information</title>
 
 <!-- 步驟一、在使用TPRS推薦API的頁面上引用 tprs.js 與 jquery-1.8.0.min.js -->
-<!-- <script type="text/javascript" src="jquery-1.8.0.min.js"></script> -->
-<script src="//code.jquery.com/jquery-2.1.1.js"></script>
-
-<script type="text/javascript" src="../js/trsClientToolCode/tprs.js"></script> 
+<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="tprs.js"></script> 
 
 <script>
-	//var cid = "A_123456789"; //系統給定的公司帳號
-	//var acctId = "admin"; //系統給定的使用者帳號
-	//var campaignId = "A_1412092151169"; //系統給定的活動代碼
-	var cid = "root";
-	var acctId = "root";
-	//下架的活動 :A_1409251013132 : It's not work
-	//上架的活動 :A_1412041440197 : It's work(但依系統來說要等5分鐘才會寫入DB)
-	var campaignId = "A_1412041440197";
+	var cid = "A_123456789"; //系統給定的公司帳號
+	var acctId = "admin"; //系統給定的使用者帳號
+	var campaignId = "A_1412092151169"; //系統給定的活動代碼
 	
 	var tprs = new TrsApi(cid,acctId,campaignId);
 	
-	function updateProduct(){
-		var itemId = "A01";
-		var mainCate = "B";
-		var middleCate = "BB";
-		var endCate = "XYZ";
-		var itemName = "華碩電腦(ASUS)";
-		var newItem = "1";
+	function updateProduct(){		
+		var itemId = "909";
+		var mainCate = "MAIN-1";
+		var middleCate = "MID-1";
+		var endCate = "END-1";
+		var itemName = "華碩筆電";
+		var newItem = "0";
 		var outDate = "";
 		var priority = null;
 		var attributes = null;
-		var listPrice = "1040";
-		var specialPrice = "870";
+		var listPrice = "1000";
+		var specialPrice = "800";
 		var itemUrl = "";
 		var imgUrl = "";
 		var stock = "10";
-		alert("1.tprs = " + tprs);
 		tprs.product(itemId,mainCate,middleCate,endCate,itemName,newItem,outDate,priority,attributes,listPrice,specialPrice,itemUrl,imgUrl,stock);
-		alert("updateProduct End.");
 	}
 </script>
 

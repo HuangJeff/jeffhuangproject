@@ -13,52 +13,44 @@
 			<td width="45%">
 				<table border=1>
 					<tr>
-						<td>
-							測試元件：fmt (http://java.sun.com/jsp/jstl/fmt)
-						</td>
-						<td>
-					 		<a href="./jstl_fmt.jsp">連結....</a>
-						</td>
+						<th>測試元件：fmt (http://java.sun.com/jsp/jstl/fmt)</th>
+						<td><a href="./jstl_fmt.jsp">連結....</a></td>
 					</tr>
 					<tr>
-						<td>
-							jQuery Test
-						</td>
-						<td>
-							<a href="./jQuery/jQueryTest01.jsp">連結....</a>
-						</td>
+						<th>jQuery Test</th>
+						<td><a href="./jQuery/jQueryTest01.jsp">連結....</a></td>
 					</tr>
 					<tr>
-						<td> 測試網頁上for-loop + 下拉選單套件 </td>
+						<th> 測試網頁上for-loop + 下拉選單套件 </th>
 						<td> <a href="./web/TestJspFromMyBeans.jsp">連結....</a> </td>
 					</tr>
 					<tr>
-						<td>Find User Language</td>
+						<th>Find User Language</th>
 						<td><a href="./language/findUserLanguage.jsp">連結....</a></td>
 					</tr>
 					<tr>
-						<td>
-							測試Table中的彈跳視窗
-						</td>
-						<td>
-							<a href="./testPopupWin/TablePopupWin.jsp">連結....</a>
-						</td>
+						<th>測試Table中的彈跳視窗</th>
+						<td><a href="./testPopupWin/TablePopupWin.jsp">連結....</a></td>
 					</tr>
 					<tr>
-						<td>
-						  AJAX TEST
-						</td>
-						<td>
-						  <a href="./ajax/ajax_test.html">連結....</a>
-						</td>
+						<th>AJAX TEST</th>
+						<td><a href="./ajax/ajax_test.html">連結....</a></td>
 					</tr>
 					<tr>
+						<th>event 的方法 preventDefault()</th>
+						<td><a href="./event/preventDefaultSample.html">連結....</a></td>
+					</tr>
+					<tr>
+						<th>AJAX TEST(有Server端)</th>
 						<td>
+							<a href="./ajax/myPage.jsp">一般頁面</a>
 							<br>
+							<a href="./ajax/callMyTestAjax.jsp">AJAX練習</a>
 						</td>
-						<td>
-					
-						</td>
+					</tr>
+					<tr>
+						<th>tttt</th>
+						<td><a href="#">連結....</a></td>
 					</tr>
 				</table>
 			</td>
@@ -72,7 +64,7 @@
 			    </tr>
 			    <tr>
 			      <th>
-			        <a href="./trsClientToolCode/TPRS_Product_Update_Sample.html">
+			        <a href="./trsClientToolCode/TPRS_Sample_Code.html">
 			      		客戶頁面引用javascript程式</a>
 			      </th>
 			    </tr>
