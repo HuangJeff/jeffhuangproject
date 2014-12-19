@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sample for Updating the product information</title>
+
+<!-- 步驟一、在使用TPRS推薦API的頁面上引用 tprs.js 與 jquery-1.8.0.min.js -->
+<!-- <script type="text/javascript" src="jquery-1.8.0.min.js"></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<!-- <script src="//code.jquery.com/jquery-2.1.1.js"></script> -->
+
+<script type="text/javascript" src="js/tprs-2.1.js"></script>
+
+<script>
+	var cid = "root"; //系統給定的公司帳號
+	var acctId = "root"; //系統給定的使用者帳號
+	var campaignId = "A_1412160914319"; //系統給定的活動代碼
+	/*
+		實體化 TrsApi
+		宣告變數 tprs (固定名稱[保留字]，勿異動，程式會認此變數名稱)
+	*/
+	var tprs = new TrsApi(cid,acctId,campaignId);
+	
+	/*
+	 * 更新商品資料
+	 * 參數說明:
+	 * itemId : 商品編號
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * itemName : 商品名稱
+	 * newItem : 新品標示,"0" 或 "1"("1"表示新品) 
+	 * outDate: 到期日 YYYYMMDD (一般建議給"",系統會預設隔天過期)
+	 * priority: 優先序(數字) 
+	 * attributes: 附加屬性,最多10個,以','隔開
+	 * listPrice: 定價
+	 * specialPrice: 優惠價
+	 * itemUrl: 商品url
+	 * imgUrl: 圖片url
+	 * stock: 庫存量
+	 */
+	function updateProduct(){
+		 var itemId = $("#itemId").val();
+		 var mainCate = $("#mainCate").val();
+		 var middleCate = $("#middleCate").val();
+		 var endCate = $("#endCate").val();
+		 var itemName = $("#itemName").val();
+		 var newItem = $("#newItem").val();
+		 var outDate = $("#outDate").val();//建議不設定,系統會預設隔天過期
+		 var priority = $("#priority").val();
+		 if(priority == "") {
+			 priority = null;
+		 }
+		 
+		 var attributes = $("#attributes").val();
+		 if(attributes == "") {
+			 attributes = null;
+		 }
+		 
+		 var listPrice = $("#listPrice").val();
+		 var specialPrice = $("#specialPrice").val();
+		 var itemUrl = $("#itemUrl").val();
+		 var imgUrl = $("#imgUrl").val();
+		 var stock = $("#stock").val();
+		/*
+		var itemId = "102";
+		var mainCate = "A";
+		var middleCate = "AB";
+		var endCate = "ABC";
+		var itemName = "華碩筆電(X401A)";
+		var newItem = "1";
+		var outDate = "";//建議不設定,系統會預設隔天過期
+		var priority = null;
+		var attributes = null;
+		var listPrice = "43000";
+		var specialPrice = "42000";
+		var itemUrl = "http://www.asus.com/Notebooks_Ultrabooks/X401A/";
+		var imgUrl = "http://www.savesafe.com.tw/ProdImg/1036/161/00/1036161_00_list.jpg";
+		var stock = "10";
+		*/
+		tprs.product(itemId,mainCate,middleCate,endCate,itemName,newItem,outDate,priority,attributes,listPrice,specialPrice,itemUrl,imgUrl,stock);
+	}
+	 
+	 /*function getProductData() {
+		 //alert($("#itemId").val());
+		 
+		 var itemId = $("#itemId").val();
+		 var mainCate = $("#mainCate").val();
+		 var middleCate = $("#middleCate").val();
+		 var endCate = $("#endCate").val();
+		 var itemName = $("#itemName").val();
+		 var newItem = $("#newItem").val();
+		 var outDate = $("#outDate").val();//建議不設定,系統會預設隔天過期
+		 var priority = $("#priority").val();
+		 if(priority == "") {
+			 priority = null;
+		 }
+		 
+		 var attributes = $("#attributes").val();
+		 if(attributes == "") {
+			 attributes = null;
+		 }
+		 
+		 var listPrice = $("#listPrice").val();
+		 var specialPrice = $("#specialPrice").val();
+		 var itemUrl = $("#itemUrl").val();
+		 var imgUrl = $("#imgUrl").val();
+		 var stock = $("#stock").val();
+			
+	 }*/
+</script>
+
+
+
+</head>
+<body>
+<H1> 個人測試更新產品檔資訊測試頁面 </H1>
+
+This HTML file could not be executed on your local file system, please run it from a web server. <br/>
+無法在local端用瀏覽器打開檔案方式執行,請放置於web server上測試<br/>
+<br/>
+<!--
+<a href="javascript:updateProduct();">Click me to simulate Updating the product data</a>
+-->
+<table style="width : 50%;" border=1>
+	<tr>
+		<th style="width : 20%;">★商品編號</th>
+		<td><input type="text" id="itemId">itemId</td>
+	</tr>
+	<tr>
+		<th style="width : 20%;">商品名稱</th>
+		<td><input type="text" id="itemName">itemName</td>
+	</tr>
+	<tr>
+		<th>★大類</th>
+		<td><input type="text" id="mainCate">mainCate</td>
+	</tr>
+	<tr>
+		<th>★中類</th>
+		<td><input type="text" id="middleCate">middleCate</td>
+	</tr>
+	<tr>
+		<th>★小類</th>
+		<td><input type="text" id="endCate">endCate</td>
+	</tr>
+	<tr>
+		<th>新品標示</th>
+		<td><input type="text" id="newItem">newItem ["0" 或 "1"("1"表示新品)]</td>
+	</tr>
+	<tr>
+		<th>到期日 </th>
+		<td><input type="text" id="outDate">outDate [ YYYYMMDD (一般建議給"",系統會預設隔天過期)]</td>
+	</tr>
+	<tr>
+		<th>優先序(數字)</th>
+		<td><input type="text" id="priority">priority</td>
+	</tr>
+	<tr>
+		<th>附加屬性</th>
+		<td><input type="text" id="attributes">attributes [最多10個,以','隔開]</td>
+	</tr>
+	<tr>
+		<th>定價</th>
+		<td><input type="text" id="listPrice">listPrice</td>
+	</tr>
+	<tr>
+		<th>優惠價</th>
+		<td><input type="text" id="specialPrice">specialPrice</td>
+	</tr>
+	<tr>
+		<th>商品url</th>
+		<td><input type="text" id="itemUrl">itemUrl</td>
+	</tr>
+	<tr>
+		<th>圖片url</th>
+		<td><input type="text" id="imgUrl">imgUrl</td>
+	</tr>
+	<tr>
+		<th>庫存量</th>
+		<td><input type="text" id="stock">stock</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+			<button onclick="javascript:updateProduct();">按鈕A</button>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

@@ -5,30 +5,55 @@
 <title>Sample for Updating the product information</title>
 
 <!-- 步驟一、在使用TPRS推薦API的頁面上引用 tprs.js 與 jquery-1.8.0.min.js -->
-<script type="text/javascript" src="jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="tprs.js"></script> 
+<!-- <script type="text/javascript" src="jquery-1.8.0.min.js"></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<!-- <script src="//code.jquery.com/jquery-2.1.1.js"></script> -->
+
+<script type="text/javascript" src="js/tprs-2.1.js"></script>
 
 <script>
-	var cid = "A_123456789"; //系統給定的公司帳號
-	var acctId = "admin"; //系統給定的使用者帳號
-	var campaignId = "A_1412092151169"; //系統給定的活動代碼
-	
+	var cid = "root"; //系統給定的公司帳號
+	var acctId = "root"; //系統給定的使用者帳號
+	var campaignId = "A_1412160914319"; //系統給定的活動代碼
+	/*
+		實體化 TrsApi
+		宣告變數 tprs (固定名稱[保留字]，勿異動，程式會認此變數名稱)
+	*/
 	var tprs = new TrsApi(cid,acctId,campaignId);
 	
-	function updateProduct(){		
-		var itemId = "909";
-		var mainCate = "MAIN-1";
-		var middleCate = "MID-1";
-		var endCate = "END-1";
-		var itemName = "華碩筆電";
-		var newItem = "0";
-		var outDate = "";
+	/*
+	 * 更新商品資料
+	 * 參數說明:
+	 * itemId : 商品編號
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * itemName : 商品名稱
+	 * newItem : 新品標示,"0" 或 "1"("1"表示新品) 
+	 * outDate: 到期日 YYYYMMDD (一般建議給"",系統會預設隔天過期)
+	 * priority: 優先序(數字) 
+	 * attributes: 附加屬性,最多10個,以','隔開
+	 * listPrice: 定價
+	 * specialPrice: 優惠價
+	 * itemUrl: 商品url
+	 * imgUrl: 圖片url
+	 * stock: 庫存量
+	 */
+	function updateProduct(){
+		var itemId = "104";
+		var mainCate = "A";
+		var middleCate = "AB";
+		var endCate = "999";
+		var itemName = "《PORTMAN》 時尚繽紛尼龍單肩包 PM142126 (螢光綠)";
+		var newItem = "1";
+		var outDate = "";//建議不設定,系統會預設隔天過期
 		var priority = null;
 		var attributes = null;
-		var listPrice = "1000";
-		var specialPrice = "800";
-		var itemUrl = "";
-		var imgUrl = "";
+		var listPrice = "43000";
+		var specialPrice = "42000";
+		var itemUrl = "http://www.savesafe.com.tw/Products/ProductView.aspx?t_s_id=42233&s_id=e9e091ae69984bb45ecd930b2438da24";
+		var imgUrl = "http://www.savesafe.com.tw/ProdImg/1611/208/00/1611208_00_main.jpg";
 		var stock = "10";
 		tprs.product(itemId,mainCate,middleCate,endCate,itemName,newItem,outDate,priority,attributes,listPrice,specialPrice,itemUrl,imgUrl,stock);
 	}
