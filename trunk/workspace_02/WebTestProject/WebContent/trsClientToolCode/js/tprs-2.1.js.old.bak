@@ -38,7 +38,6 @@ function TrsApi(cid,acctId,campaignId) {
 		mainCate = encodeURI(mainCate);
 		middleCate = encodeURI(middleCate);
 		endCate = encodeURI(endCate);
-		
 		$.ajax({
 			type: "post",
 			contentType: ajax_content_type,
@@ -103,7 +102,7 @@ function TrsApi(cid,acctId,campaignId) {
 	 * endCate : 小類
 	 * itemName : 商品名稱
 	 * newItem : 新品標示,"0" 或 "1"("1"表示新品) 
-	 * outDate: 到期日 YYYYMMDD 
+	 * outDate: 到期日 YYYYMMDD (一般建議給"",系統會預設隔天過期)
 	 * priority: 優先序(數字) 
 	 * attributes: 附加屬性,最多10個,以','隔開
 	 * listPrice: 定價
@@ -112,7 +111,7 @@ function TrsApi(cid,acctId,campaignId) {
 	 * imgUrl: 圖片url
 	 * stock: 庫存量
 	 * --------------------------------------------------
-	 */
+	 */		
 	this.product = function(itemId,mainCate,middleCate,endCate,itemName,newItem,outDate,priority,attributes,listPrice,specialPrice,itemUrl,imgUrl,stock) {
 		
 		mainCate = encodeURI(mainCate);
@@ -127,7 +126,7 @@ function TrsApi(cid,acctId,campaignId) {
 			url: tprs_server_url + "/api/fblog/product",			
 			data: {ptsub : ptsub , ptsua : ptsua, ptsmd : ptsmd, ptsri: itemId,ptscmm : mainCate ,ptscmd : middleCate, ptsced : endCate,newitem:newItem,outdate:outDate,priority:priority,attrs:attributes,lprice:listPrice,sprice:specialPrice,itemurl:itemUrl,imgurl:imgUrl,itemname:itemName,stock:stock},
 			error: function(xhr) {
-				if (debug) alert('Ajax request error' + xhr);
+				if (debug) alert('Ajax request error');
 			},
 			success: function(response) {
 				if (debug) alert(response);		
@@ -187,22 +186,32 @@ function TrsApi(cid,acctId,campaignId) {
 	 * middleCate : 中類
 	 * endCate : 小類
 	 * howMany : 推薦個數
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
 	 * targetDivId : 頁面顯示區域的Div ID
 	 * -------------------
 	 */
-	this.allrcmd = function(mainCate, middleCate, endCate, howMany,targetDivId) {
-		alert('allrcmd');
+	this.allrcmd = function(mainCate, middleCate, endCate, howMany,titles,targetDivId) {		
 		$.ajax({
 			url: tprs_server_url + "/api/html/allrcmd",
-			data: {ptsub : ptsub , ptsua : ptsua, ptsmd : ptsmd, ptscmm : mainCate , ptscmd : middleCate, ptsced : endCate,ptsrhm : howMany},
-			error: function(xhr) {
+			data: {ptsub : ptsub , 
+			ptsua : ptsua, 
+			ptsmd : ptsmd, 
+			ptscmm : mainCate , 
+			ptscmd : middleCate, 
+			ptsced : endCate,
+			ptsrhm : howMany,
+			title : encodeURI(titles)
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
 				if (debug){
 					$("#"+targetDivId).html('Ajax request error');
+					alert(jqXHR.status  + ' - ' +textStatus);
 				}
+				
 			},
 			success: function(response) {
 				response = decodeURI(response);
-				if (debug) alert(response);					
+				if (debug) alert(response);				
 				$("#"+targetDivId).html(response);
 			}
 		});
@@ -218,10 +227,11 @@ function TrsApi(cid,acctId,campaignId) {
 	 * userId : 使用者ID
 	 * howMany : 推薦個數
 	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
 	 * targetDivId : 頁面顯示區域的Div ID
 	 * -------------------
 	 */
-	this.catercmd = function(mainCate, middleCate, endCate,userId, hotSale,howMany,targetDivId) {
+	this.catercmd = function(mainCate, middleCate, endCate,userId, hotSale,howMany,titles,targetDivId) {
 		
 		$.ajax({
 			url: tprs_server_url + "/api/html/catercmd",
@@ -233,7 +243,8 @@ function TrsApi(cid,acctId,campaignId) {
 				   ptsced : endCate,
 				   ptsrhm : howMany,
 				   ptsru :userId,
-				   hotsale : hotSale
+				   hotsale : hotSale,
+				   title : encodeURI(titles)
 				   },
 			error: function(xhr) {
 				//$("#"+targetDivId).html('Ajax request error');
@@ -258,10 +269,11 @@ function TrsApi(cid,acctId,campaignId) {
 	 * howMany : 推薦個數
 	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)
 	 * newitem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
 	 * targetDivId : 頁面顯示區域的Div ID
 	 * -------------------
 	 */			
-	this.alsobuyrcmd = function(mainCate, middleCate, endCate,itemId,sameCate,hotSale,newitem,howMany,targetDivId) {
+	this.alsobuyrcmd = function(mainCate, middleCate, endCate,itemId,sameCate,hotSale,newitem,howMany,titles,targetDivId) {
 		
 		$.ajax({
 			url: tprs_server_url + "/api/html/alsobuyrcmd",
@@ -275,7 +287,8 @@ function TrsApi(cid,acctId,campaignId) {
 				   ptsri : itemId,
 				   ptsca : sameCate,
 				   hotsale : hotSale,
-				   newitem : newitem
+				   newitem : newitem,
+				   title : encodeURI(titles)
 				   },
 			error: function(xhr) {
 				//$("#"+targetDivId).html('Ajax request error');
@@ -300,10 +313,11 @@ function TrsApi(cid,acctId,campaignId) {
 	 * howMany : 推薦個數
 	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)
 	 * newitem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
 	 * targetDivId : 頁面顯示區域的Div ID
 	 * -------------------
 	 */			
-	this.alsoviewrcmd = function(mainCate, middleCate, endCate,itemId,sameCate,hotSale,newitem,howMany,targetDivId) {
+	this.alsoviewrcmd = function(mainCate, middleCate, endCate,itemId,sameCate,hotSale,newitem,howMany,titles,targetDivId) {
 		
 		$.ajax({
 			url: tprs_server_url + "/api/html/alsoviewrcmd",
@@ -317,7 +331,8 @@ function TrsApi(cid,acctId,campaignId) {
 				   ptsri : itemId,
 				   ptsca : sameCate,
 				   hotsale : hotSale,
-				   newitem : newitem
+				   newitem : newitem,
+				   title : encodeURI(titles)
 				   },
 			error: function(xhr) {
 				//$("#"+targetDivId).html('Ajax request error');
@@ -341,10 +356,11 @@ function TrsApi(cid,acctId,campaignId) {
 	 * bonly : 是否只查瀏覽行為, Y or N (預設為N)
 	 * howMany : 推薦個數
 	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)	
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
 	 * targetDivId : 頁面顯示區域的Div ID
 	 * -------------------
 	 */	 
-	this.itemcatercmd = function(mainCate,middleCate, endCate,itemId,hotSale,bonly,howMany,targetDivId){		
+	this.itemcatercmd = function(mainCate,middleCate, endCate,itemId,hotSale,bonly,howMany,titles,targetDivId){		
 		$.ajax({
 			url: tprs_server_url + "/api/html/itemcatercmd",
 			data: {ptsub : ptsub, 
@@ -356,7 +372,8 @@ function TrsApi(cid,acctId,campaignId) {
 				   ptsrhm : howMany,
 				   ptsri : itemId,
 				   bonly : bonly,
-				   hotsale : hotSale
+				   hotsale : hotSale,
+				   title : encodeURI(titles)
 				   },
 			error: function(xhr) {
 				//$("#"+targetDivId).html('Ajax request error');
@@ -379,16 +396,17 @@ function TrsApi(cid,acctId,campaignId) {
 	 * sameCate : 是否限縮在此商品之同類別, "true" 或 "false"(預設false)
 	 * bonly : 是否只查瀏覽行為, Y or N (預設為N)	 
 	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)	
-	 * newitem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * newItem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
 	 * howMany : 推薦個數
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
 	 * targetDivId : 頁面顯示區域的Div ID
 	 * -------------------
 	 */	 
-	this.itemcate_alsobuy = function(mainCate, middleCate, endCate,itemId,hotSale,sameCate,bonly,newItem,howMany,targetDivId) {
+	this.itemcate_alsobuy = function(mainCate, middleCate, endCate,itemId,hotSale,sameCate,bonly,newItem,howMany,titles,targetDivId) {
 		
 		$.ajax({
 			url: tprs_server_url + "/api/html/itemcate_alsobuy",
-			data: {ptsub : ptsub , 
+			data: {ptsub : ptsub, 
 				   ptsua : ptsua, 
 				   ptsmd : ptsmd, 
 				   ptscmm : mainCate , 
@@ -399,7 +417,8 @@ function TrsApi(cid,acctId,campaignId) {
 				   ptsca : sameCate,
 				   bonly : bonly,
 				   newitem : newItem,
-				   ptsrhm : howMany
+				   ptsrhm : howMany,
+				   title : encodeURI(titles)
 				   },
 			error: function(xhr) {
 				//$("#"+targetDivId).html('Ajax request error');
@@ -423,11 +442,12 @@ function TrsApi(cid,acctId,campaignId) {
 	 * sameCate : 是否限縮在此商品之同類別, "true" 或 "false"(預設false)
 	 * howMany : 推薦個數
 	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)
-	 * newitem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * newItem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
 	 * targetDivId : 頁面顯示區域的Div ID
 	 * -------------------
 	 */	
-	this.alsoview_alsobuy = function(mainCate, middleCate, endCate,itemId,sameCate,hotSale,newitem,howMany,targetDivId) {
+	this.alsoview_alsobuy = function(mainCate, middleCate, endCate,itemId,sameCate,hotSale,newItem,howMany,titles,targetDivId) {
 		
 		$.ajax({
 			url: tprs_server_url + "/api/html/alsoview_alsobuy",
@@ -441,7 +461,8 @@ function TrsApi(cid,acctId,campaignId) {
 				   ptsca : sameCate,
 				   ptsrhm : howMany,	
 				   hotsale : hotSale,
-				   newitem : newitem
+				   newitem : newItem,
+				   title : encodeURI(titles)
 				   },
 			error: function(xhr) {
 				//$("#"+targetDivId).html('Ajax request error');
@@ -465,12 +486,13 @@ function TrsApi(cid,acctId,campaignId) {
 	 * sameCate : 是否限縮在此商品之同類別, "true" 或 "false"(預設false)
 	 * bonly : 是否只查瀏覽行為, Y or N (預設為N)	 
 	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)	
-	 * newitem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * newItem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
 	 * howMany : 推薦個數
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
 	 * targetDivId : 頁面顯示區域的Div ID
 	 * -------------------
 	 */	 
-	this.itemcate_alsoview_alsobuy = function(mainCate, middleCate, endCate,itemId,hotSale,sameCate,bonly,newItem,howMany,targetDivId) {
+	this.itemcate_alsoview_alsobuy = function(mainCate, middleCate, endCate,itemId,hotSale,sameCate,bonly,newItem,howMany,titles,targetDivId) {
 		
 		$.ajax({
 			url: tprs_server_url + "/api/html/itemcate_alsoview_alsobuy",
@@ -485,7 +507,8 @@ function TrsApi(cid,acctId,campaignId) {
 				    ptsca : sameCate,
 				    bonly : bonly,
 				    hotsale : hotSale,
-				    newItem : newItem
+				    newitem : newItem,
+					title : encodeURI(titles)
 				   },
 			error: function(xhr) {
 				//$("#"+targetDivId).html('Ajax request error');
@@ -504,11 +527,13 @@ function TrsApi(cid,acctId,campaignId) {
 	 * -------------------	
 	 * itemId : 商品編號
 	 * userId : 使用者ID
-	 * newitem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * newitem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代	 
 	 * howMany : 推薦個數
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
 	 * -------------------
 	 */	 
-	 this.user_buy = function(itemId,userId,newItem,howMany,targetDivId) {
+	 this.user_buy = function(itemId,userId,newItem,howMany,titles,targetDivId) {
 		
 		$.ajax({
 			url: tprs_server_url + "/api/html/user_buy",
@@ -518,7 +543,8 @@ function TrsApi(cid,acctId,campaignId) {
 				   ptsrhm : howMany,
 				   ptsri : itemId,
 				   ptsru : userId,
-				   newitem : newItem
+				   newitem : newItem,
+				   title : encodeURI(titles)
 				   },
 			error: function(xhr) {
 				//$("#"+targetDivId).html('Ajax request error');
@@ -537,11 +563,13 @@ function TrsApi(cid,acctId,campaignId) {
 	 * -------------------	
 	 * itemId : 商品編號
 	 * userId : 使用者ID
-	 * newitem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * newItem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
 	 * howMany : 推薦個數
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
 	 * -------------------
 	 */	 
-	 this.user_view = function(itemId,userId,newItem,howMany,targetDivId) {
+	 this.user_view = function(itemId,userId,newItem,howMany,titles,targetDivId) {
 		
 		$.ajax({
 			url: tprs_server_url + "/api/html/user_view",
@@ -551,7 +579,8 @@ function TrsApi(cid,acctId,campaignId) {
 				   ptsrhm : howMany,
 				   ptsri : itemId,
 				   ptsru : userId,
-				   newitem : newItem
+				   newitem : newItem,
+				   title : encodeURI(titles)
 				   },
 			error: function(xhr) {
 				//$("#"+targetDivId).html('Ajax request error');
@@ -565,6 +594,21 @@ function TrsApi(cid,acctId,campaignId) {
 	}
 }
 
+//----------------------------------------
+//若有特殊取得User Id的做法,請修改此method
+//----------------------------------------
+function get_TprsUserId(){
+	
+	var trsuser = readCookie('trsuser');	 
+	
+	if(typeof trsuser == undefined || trsuser == undefined || trsuser == '' || trsuser == 'undefined' || trsuser == 'null'){
+		//if(debug) alert('trsuser is undefined or null, creat one..');
+		createCookie ('trsuser', guid(),10000);
+	}
+	trsuser = readCookie('trsuser');
+	//if(debug) alert('userId : ' + 	trsuser);
+	return trsuser;
+}
 
 function createCookie(name,value,days) {
 	//if(debug) alert('[createCookie] I am in.');
@@ -611,34 +655,17 @@ var guid = (function() {
   };
 })();
 
-function get_TprsUserId(){
+function menueffect(obj){
+	var selitem = jQuery(obj);
 	
-	var trsuser = readCookie('trsuser');	 
-	
-	if(typeof trsuser == undefined || trsuser == undefined || trsuser == '' || trsuser == 'undefined' || trsuser == 'null'){
-		//if(debug) alert('trsuser is undefined or null, creat one..');
-		createCookie ('trsuser', guid(),10000);
-	}
-	trsuser = readCookie('trsuser');
-	//if(debug) alert('userId : ' + 	trsuser);
-	return trsuser;
-}
-
-
-jQuery(function () {
-	jQuery("ul.TPRSMenu > li").on("mouseenter", function () {
-		jQuery("ul.TPRSMenu > li").removeClass("selected");
-		var selitem = tprsjq(this);
+	if(!selitem.hasClass("selected")){
+		selitem.parent().find("li").removeClass("selected");
 		selitem.addClass("selected");
-		//console.log(selitem.index());
-
+		
 		jQuery("div.TPRSContent > table.selected").removeClass("selected");
 		jQuery("div.TPRSContent > table[data-index=" + selitem.index() + "]").addClass("selected");
-	});
-
-	//set default item
-	jQuery("ul.TPRSMenu > li:nth-child(1)").trigger("mouseenter");
-});
+	}
+}
 
 	
 

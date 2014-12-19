@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sample for using TPRS API</title>
+
+<!-- 步驟一、在使用TPRS推薦API的頁面上引用 tprs.js 與 jquery-1.8.0.min.js -->
+<!-- <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/tprs-2.1.js"></script>
+
+<!-- 步驟二、套用TPRS-Style.css -->
+<link rel="stylesheet" href="css/TPRS-Style.css" />
+
+<script>
+	var cid = "root"; //系統給定的公司帳號
+	var acctId = "root"; //系統給定的使用者帳號
+	var campaignId = "A_1412160914319"; //系統給定的活動代碼		
+	/*
+		實體化 TrsApi
+		宣告變數 tprs (固定名稱[保留字]，勿異動，程式會認此變數名稱)
+	*/
+	var tprs = new TrsApi(cid,acctId,campaignId);//tprs 保留字，勿異動
+	
+	/*
+	 * 1.熱銷推薦
+	 * 參數說明:
+	 * -------------------
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * howMany : 推薦個數
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
+	 * -------------------
+	 */
+	function recommend1(){
+		var mainCate = "";
+		var middleCate = "";
+		var endCate = "";
+		var howMany = 5;
+		var targetDivId = "tprs";
+		var titles = "中文測試";
+		tprs.allrcmd(mainCate, middleCate, endCate,howMany,titles,targetDivId);
+	}	
+	/*
+	 * 2.分類精選推薦
+	 * 參數說明:
+	 * -------------------
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * userId : 使用者ID
+	 * howMany : 推薦個數
+	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
+	 * -------------------
+	 */
+	function recommend2(){
+		var mainCate = "";
+		var middleCate = "";
+		var endCate = "";
+		var userId = get_TprsUserId();//取cookie id, 也可由客戶取自己定義的cookie id
+		var hotSale = "Y";
+		var howMany = 5;
+		var targetDivId = "tprs";
+		var titles = "中文測試";
+		tprs.catercmd(mainCate, middleCate, endCate,userId, hotSale,howMany,titles,targetDivId);
+	}
+	/*
+	 * 3.買此商品的人也買了
+	 * 參數說明:
+	 * -------------------
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * itemId : 商品編號
+	 * sameCate : 是否限縮在此商品之同類別, "true" 或 "false"(預設false)
+	 * howMany : 推薦個數
+	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)
+	 * newitem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
+	 * -------------------
+	 */			
+	function recommend3(){
+		var mainCate = "";
+		var middleCate = "";
+		var endCate = "";
+		var itemId = "301";
+		var sameCate = false;
+		var hotSale = "Y";
+		var newitem = "1";
+		var howMany = 5;
+		var targetDivId = "tprs";
+		var titles = "中文測試";
+		tprs.alsobuyrcmd(mainCate, middleCate, endCate,itemId,sameCate,hotSale,newitem,howMany,titles,targetDivId);
+	}
+	/*
+	 * 4.看此商品的人也看了
+	 * 參數說明:
+	 * -------------------
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * itemId : 商品編號
+	 * sameCate : 是否限縮在此商品之同類別, "true" 或 "false"(預設false)
+	 * howMany : 推薦個數
+	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)
+	 * newitem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
+	 * -------------------
+	 */		
+	function recommend4(){
+		var mainCate = "";
+		var middleCate = "";
+		var endCate = "";
+		var itemId = "101";
+		var sameCate = false;
+		var hotSale = "Y";
+		var newitem = "1";
+		var howMany = 5;
+		var targetDivId = "tprs";
+		var titles = "中文測試";
+		tprs.alsoviewrcmd(mainCate, middleCate, endCate,itemId,sameCate,hotSale,newitem,howMany,titles,targetDivId);
+	}
+	/*
+	 * 5.同類推薦
+	 * 參數說明:
+	 * -------------------
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * itemId : 商品編號
+	 * bonly : 是否只查瀏覽行為, Y or N (預設為N)
+	 * howMany : 推薦個數
+	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
+	 * -------------------
+	 */	 
+	function recommend5(){
+		var mainCate = "";
+		var middleCate = "";
+		var endCate = "";
+		var itemId = "101";
+		var hotSale = "Y";
+		var bonly = "N";
+		var howMany = 5;
+		var targetDivId = "tprs";
+		var titles = "中文測試";
+		tprs.itemcatercmd(mainCate,middleCate, endCate,itemId,hotSale,bonly,howMany,titles,targetDivId);
+	}
+	/*
+	 * 6.同類推薦 + 買此商品的人也買了
+	 * 參數說明:
+	 * -------------------
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * itemId : 商品編號
+	 * sameCate : 是否限縮在此商品之同類別, "true" 或 "false"(預設false)
+	 * bonly : 是否只查瀏覽行為, Y or N (預設為N)	 
+	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)	
+	 * newItem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * howMany : 推薦個數
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
+	 * -------------------
+	 */	 
+	function recommend6(){
+		var mainCate = "";
+		var middleCate = "";
+		var endCate = "";
+		var itemId = "";
+		var hotSale = "Y";
+		var sameCate = false;
+		var bonly = "N";
+		var newItem = "1";
+		var howMany = 5;
+		var targetDivId = "tprs";
+		var titles = "中文測試";
+		tprs.itemcate_alsobuy(mainCate, middleCate, endCate,itemId,hotSale,sameCate,bonly,newItem,howMany,titles,targetDivId);
+	}
+	/*
+	 * 7.看此商品的人也看了 + 買此商品的人也買了
+	 * 參數說明:
+	 * -------------------
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * itemId : 商品編號
+	 * sameCate : 是否限縮在此商品之同類別, "true" 或 "false"(預設false)
+	 * howMany : 推薦個數
+	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)
+	 * newItem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
+	 * -------------------
+	 */	
+	function recommend7(){
+		var mainCate = "";
+		var middleCate = "";
+		var endCate = "";
+		var itemId = "303";		
+		var sameCate = false;
+		var hotSale = "Y";
+		var newItem = "1";
+		var howMany = 5;
+		var targetDivId = "tprs";
+		var titles = "中文測試";
+		tprs.alsoview_alsobuy(mainCate, middleCate, endCate,itemId,sameCate,hotSale,newItem,howMany,titles,targetDivId);
+	}
+	/*
+	 * 8.同類推薦 + 看此商品的人也看了 + 買此商品的人也買了
+	 * 參數說明:
+	 * -------------------
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * itemId : 商品編號
+	 * sameCate : 是否限縮在此商品之同類別, "true" 或 "false"(預設false)
+	 * bonly : 是否只查瀏覽行為, Y or N (預設為N)	 
+	 * hotSale : 是否自動補熱銷, Y or N (預設為Y)	
+	 * newItem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * howMany : 推薦個數
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
+	 * -------------------
+	 */	 
+	function recommend8(){
+		var mainCate = "";
+		var middleCate = "";
+		var endCate = "";
+		var itemId = "";				
+		var hotSale = "Y";
+		var sameCate = false;
+		var bonly = "N";
+		var newItem = "1";
+		var howMany = 5;
+		var targetDivId = "tprs";
+		var titles = "中文測試";
+		tprs.itemcate_alsoview_alsobuy(mainCate, middleCate, endCate,itemId,hotSale,sameCate,bonly,newItem,howMany,titles,targetDivId);
+	}
+	/*
+	 * 9.購買相似推薦
+	 * 參數說明:
+	 * -------------------	
+	 * itemId : 商品編號
+	 * userId : 使用者ID
+	 * newitem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * howMany : 推薦個數
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
+	 * -------------------
+	 */	 
+	function recommend9(){
+		var itemId = "101";
+		var userId = get_TprsUserId();//取cookie id, 也可由客戶取自己定義的cookie id
+		var newItem = "1";
+		var howMany = 5;
+		var targetDivId = "tprs";
+		var titles = "中文測試";
+		tprs.user_buy(itemId,userId,newItem,howMany,titles,targetDivId);
+	}
+	
+	/*
+	 * 10.瀏覽相似推薦
+	 * 參數說明:
+	 * -------------------	
+	 * itemId : 商品編號
+	 * userId : 使用者ID
+	 * newItem : 是否用新品取代 : ex: 2 表示前兩個用新品取代; -2表示後兩個用新品取代
+	 * howMany : 推薦個數
+	 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+	 * targetDivId : 頁面顯示區域的Div ID
+	 * -------------------
+	 */	 
+	function recommend10(){
+		var itemId = "301";
+		var userId = get_TprsUserId();//取cookie id, 也可由客戶取自己定義的cookie id
+		var newItem = "1";
+		var howMany = 5;
+		var targetDivId = "tprs";
+		var titles = "中文測試";
+		tprs.user_view(itemId,userId,newItem,howMany,titles,targetDivId);
+	}
+</script>
+
+
+
+</head>
+<body>
+
+
+<H1> This sample shows how to use TPRS APIs</H1>
+
+This HTML file could not be executed on your local file system, please run it from a web server. <br/>
+無法在local端用瀏覽器打開檔案方式執行,請放置於web server上測試<br/>
+<br/>
+	<input type="button" onclick="recommend1()" value="1.熱銷推薦">	<br/>
+	<input type="button" onclick="recommend2()" value="2.分類精選推薦">	<br/>
+	<input type="button" onclick="recommend3()" value="3.買此商品的人也買了">	<br/>
+	<input type="button" onclick="recommend4()" value="4.看此商品的人也看了">	<br/>
+	<input type="button" onclick="recommend5()" value="5.同類推薦">	<br/>
+	<input type="button" onclick="recommend6()" value="6.同類推薦 + 買此商品的人也買了">	<br/>
+	<input type="button" onclick="recommend7()" value="7.看此商品的人也看了 + 買此商品的人也買了">	<br/>
+	<input type="button" onclick="recommend8()" value="8.同類推薦 + 看此商品的人也看了 + 買此商品的人也買了">	<br/>
+	<input type="button" onclick="recommend9()" value="9.購買相似推薦">	<br/>
+	<input type="button" onclick="recommend10()" value="10.瀏覽相似推薦">	<br/>
+	
+	<!--推薦顯示區-->
+	<div id="tprs" style=" width:95%; margin:0 auto; "></div>
+
+</body>
+</html>
