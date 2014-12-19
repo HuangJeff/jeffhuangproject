@@ -23,11 +23,11 @@
 			htmlobj = $.ajax({
 					url : url + "?name=jeff&age=22",
 					cache : false,	//默认值: true,设置为 false 将不缓存此页面。(jQuery 1.2 新功能。)
-					beforeSend : function(xhr) {
+					beforeSend : function(XMLHttpRequest) {
 						alert(xhr);
 					},
 					error : function(xhr) {
-						alert("error xhr = " + xhr);
+						alert("error xhr = " + xhr.responseText);
 					},
 					success : function(obj) {
 						alert("obj = " + obj);
