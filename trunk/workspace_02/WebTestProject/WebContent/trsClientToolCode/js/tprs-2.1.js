@@ -7,8 +7,9 @@
  ***************************************************************************/
 
 //修改為實際TPRS server位置 
-var tprs_server_url = "http://202.3.167.248/trs"; //202.3.167.248 --> 麗嬰房的主機
-var debug = false;
+//var tprs_server_url = "http://202.3.167.248/trs"; //202.3.167.248 --> 麗嬰房的主機
+var tprs_server_url = "http://192.168.1.88/trs";
+var debug = true;
 
 function TrsApi(cid,acctId,campaignId) {
 	
