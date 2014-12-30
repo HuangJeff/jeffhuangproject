@@ -8,13 +8,20 @@
 	String userId = "11";
 	
 	
-	//帳號/活動代碼
+	//帳號/活動代碼(麗嬰房的範例)
 	String cid = "T04377371";								//系統給定的公司帳號
 	String acctId = "admin";								//系統給定的使用者帳號
 	String campaignId = "A_1412190939536"; 	//系統給定的活動代碼
 	
+	//帳號/活動代碼(本機的範例-大買家)
+	cid = "root";
+	acctId = "root";
+	campaignId = "A_1412160914319";
+	
+	
+	
 	//產品的各項資訊(資料來源：資料庫)
-	String itemId = "103";			//商品編號
+	String itemId = "101";			//商品編號
 	String mainCate = "A";			//大類
 	String middleCate = "AB";		//中類
 	String endCate = "ABC";			//小類
@@ -25,8 +32,10 @@
 	String attributes = null;		//附加屬性,最多10個,以','隔開
 	String listPrice = "1799";	//定價	
 	String specialPrice = "";		//優惠價
-	String itemUrl = "http://www.littlemoni.com.tw/littlemoni/index.php?action=product_detail&prod_no=P0000100003864";		//商品url
-	String imgUrl = "http://www.littlemoni.com.tw/website/uploads_product/website_1/P0000100003864_2_82527.jpg";		//圖片url
+	//String itemUrl = "http://www.littlemoni.com.tw/littlemoni/index.php?action=product_detail&prod_no=P0000100003864";		//商品url
+	//String imgUrl = "http://www.littlemoni.com.tw/website/uploads_product/website_1/P0000100003864_2_82527.jpg";		//圖片url
+	String itemUrl = "http://www.savesafe.com.tw/Products/ProductView.aspx?t_s_id=40393&s_id=3786e4d1cc4f7f8ef1c5b82f4f9a0e0e";
+	String imgUrl = "http://www.savesafe.com.tw/ProdImg/1544/843/00/1544843_00_main.jpg";
 	String stock = "10";					//庫存量
 %>
 
@@ -93,6 +102,27 @@
 	}
 	 
 	 <%-- 步驟五、選取推薦呈現模組樣式(共10組範本，參照TPRS_API_Sample.html範例)--%>
+	 /*
+		 * 1.熱銷推薦
+		 * 參數說明:
+		 * -------------------
+		 * mainCate : 大類
+		 * middleCate : 中類
+		 * endCate : 小類
+		 * howMany : 推薦個數
+		 * titles : 推薦畫面欲呈現的title,若有一個以上則以","隔開
+		 * targetDivId : 頁面顯示區域的Div ID
+		 * -------------------
+		 */
+		function recommend1(){
+			var mainCate = "";
+			var middleCate = "";
+			var endCate = "";
+			var howMany = 5;
+			var targetDivId = "tprs";
+			var titles = "中文測試";
+			tprs.allrcmd(mainCate, middleCate, endCate,howMany,titles,targetDivId);
+		}	
 	 
 	 /*
 	 * 8.同類推薦 + 看此商品的人也看了 + 買此商品的人也買了
@@ -188,7 +218,9 @@
 </head>
 
 <!-- 步驟六、body onload 呼叫function 「更新商品資料」、「推薦呈現模組」、「Click Log」 -->
-<body onload="updateProduct(); recommend8(); clickLog();">
+<!-- <body onload="updateProduct(); recommend8(); clickLog();"> -->
+<body onload="recommend1();">
+
 	<div align="center">
 		<table style="width:70%;border: 0px solid #000;">
 			<tr>
