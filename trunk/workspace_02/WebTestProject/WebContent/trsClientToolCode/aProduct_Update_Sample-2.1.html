@@ -15,7 +15,7 @@
 <script>
 	var cid = "root"; //系統給定的公司帳號
 	var acctId = "root"; //系統給定的使用者帳號
-	var campaignId = "A_1412160914319"; //系統給定的活動代碼
+	var campaignId = "A_1501071532341"; //系統給定的活動代碼
 	/*
 		實體化 TrsApi
 		宣告變數 tprs (固定名稱[保留字]，勿異動，程式會認此變數名稱)
@@ -63,6 +63,10 @@
 		 var itemUrl = $("#itemUrl").val();
 		 var imgUrl = $("#imgUrl").val();
 		 var stock = $("#stock").val();
+		 
+		 var mainCateName = $("#mainCateName").val();
+		 var midCateName = $("#midCateName").val();
+		 var endCateName = $("#endCateName").val();
 		/*
 		var itemId = "102";
 		var mainCate = "A";
@@ -78,8 +82,13 @@
 		var itemUrl = "http://www.asus.com/Notebooks_Ultrabooks/X401A/";
 		var imgUrl = "http://www.savesafe.com.tw/ProdImg/1036/161/00/1036161_00_list.jpg";
 		var stock = "10";
+		var mainCateName = "大類一";
+		var midCateName = "中類一";
+		var endCateName = "小類一";
 		*/
-		tprs.product(itemId,mainCate,middleCate,endCate,itemName,newItem,outDate,priority,attributes,listPrice,specialPrice,itemUrl,imgUrl,stock);
+		alert("update product start...");
+		tprs.product(itemId,mainCate,middleCate,endCate,itemName,newItem,outDate,priority,attributes,listPrice,specialPrice,itemUrl,imgUrl,stock,mainCateName,midCateName,endCateName);
+		alert("update product end...");
 	}
 	 
 	 /*function getProductData() {
@@ -125,28 +134,48 @@ This HTML file could not be executed on your local file system, please run it fr
 -->
 <table style="width : 50%;" border=1>
 	<tr>
+		<th style="width : 20%;">cid</th><td>root</td>
+		<th style="width : 20%;">acctId</th><td>root</td>
+		<th style="width : 20%;">campaignId</th><td>A_1501071532341</td>
+	</tr>
+</table>
+<hr>
+<table style="width : 50%;" border=1>
+	<tr>
 		<th style="width : 20%;">★商品編號</th>
 		<td><input type="text" id="itemId">itemId</td>
+	</tr>
+	<tr>
+		<th>★大類編號</th>
+		<td><input type="text" id="mainCate">mainCate</td>
+	</tr>
+	<tr>
+		<th>★中類編號</th>
+		<td><input type="text" id="middleCate">middleCate</td>
+	</tr>
+	<tr>
+		<th>★小類編號</th>
+		<td><input type="text" id="endCate">endCate</td>
+	</tr>
+	<tr>
+		<th>大類名稱</th>
+		<td><input type="text" id="mainCateName">mainCateName</td>
+	</tr>
+	<tr>
+		<th>中類名稱</th>
+		<td><input type="text" id="midCateName">midCateName</td>
+	</tr>
+	<tr>
+		<th>小類名稱</th>
+		<td><input type="text" id="endCateName">endCateName</td>
 	</tr>
 	<tr>
 		<th style="width : 20%;">商品名稱</th>
 		<td><input type="text" id="itemName">itemName</td>
 	</tr>
 	<tr>
-		<th>★大類</th>
-		<td><input type="text" id="mainCate">mainCate</td>
-	</tr>
-	<tr>
-		<th>★中類</th>
-		<td><input type="text" id="middleCate">middleCate</td>
-	</tr>
-	<tr>
-		<th>★小類</th>
-		<td><input type="text" id="endCate">endCate</td>
-	</tr>
-	<tr>
 		<th>新品標示</th>
-		<td><input type="text" id="newItem">newItem ["0" 或 "1"("1"表示新品)]</td>
+		<td><input type="text" id="newItem" value='0'>newItem ["0" 或 "1"("1"表示新品)]</td>
 	</tr>
 	<tr>
 		<th>到期日 </th>
@@ -154,31 +183,31 @@ This HTML file could not be executed on your local file system, please run it fr
 	</tr>
 	<tr>
 		<th>優先序(數字)</th>
-		<td><input type="text" id="priority">priority</td>
+		<td><input type="text" id="priority" value='1'>priority</td>
+	</tr>
+	<tr>
+		<th>定價</th>
+		<td><input type="text" id="listPrice" value='500'>listPrice</td>
+	</tr>
+	<tr>
+		<th>優惠價</th>
+		<td><input type="text" id="specialPrice" value='100'>specialPrice</td>
+	</tr>
+	<tr>
+		<th>商品url</th>
+		<td><input type="text" id="itemUrl" value='itemUrl'>itemUrl</td>
+	</tr>
+	<tr>
+		<th>圖片url</th>
+		<td><input type="text" id="imgUrl" value='imgUrl'>imgUrl</td>
+	</tr>
+	<tr>
+		<th>庫存量</th>
+		<td><input type="text" id="stock" value='0'>stock</td>
 	</tr>
 	<tr>
 		<th>附加屬性</th>
 		<td><input type="text" id="attributes">attributes [最多10個,以','隔開]</td>
-	</tr>
-	<tr>
-		<th>定價</th>
-		<td><input type="text" id="listPrice">listPrice</td>
-	</tr>
-	<tr>
-		<th>優惠價</th>
-		<td><input type="text" id="specialPrice">specialPrice</td>
-	</tr>
-	<tr>
-		<th>商品url</th>
-		<td><input type="text" id="itemUrl">itemUrl</td>
-	</tr>
-	<tr>
-		<th>圖片url</th>
-		<td><input type="text" id="imgUrl">imgUrl</td>
-	</tr>
-	<tr>
-		<th>庫存量</th>
-		<td><input type="text" id="stock">stock</td>
 	</tr>
 	<tr>
 		<td colspan="2" align="center">
