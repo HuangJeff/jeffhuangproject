@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>折線圖和直條圖範例</title>
-
+<!--
+這個是正統的堆疊直條圖，但是折線圖的線會出不來。
+-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
 <!-- <script type="text/javascript" src="flot-0.8.3/jquery.min.js"></script> -->
@@ -14,8 +16,13 @@
 <script type="text/javascript" src="flot-0.8.3/jquery.numberformatter-1.2.3.min.js"></script>
 <script type="text/javascript" src="flot-0.8.3/jquery.flot.symbol.js"></script>
 <script type="text/javascript" src="flot-0.8.3/jquery.flot.axislabels.js"></script>
+<!-- 堆疊需要的lib -->
+<script type="text/javascript" src="flot-0.8.3//jquery.flot.stack.js"></script>
 
 <script>
+//字體：Microsoft JhengHei：微軟正黑體 /PMingLiU：新細明體/DFKai-sb：標楷體
+//var g_FontType = 'Microsoft JhengHei, PMingLiU, DFKai-sb, Verdana, Arial, Helvetica, Tahoma, sans-serif';
+
 //******* 2014 Gold Price Chart
 //總成交金額
 var data1 = [
@@ -37,24 +44,24 @@ var dataset = [
         label: "推薦成交金額",
         data: data2,         
         color: "#756600",
-		yaxis: 1,
+		yaxis: 1/*,
         bars: {
             show: true, 
             align: "center",
             barWidth: 24 * 60 * 60 * 600,
             lineWidth:1
-        }
+        }*/
     }, {
         label: "總成交金額",
         data: data1,
         yaxis: 1,
-        color: "#0062FF",
+        color: "#0062FF"/*,
         bars: {
             show: true, 
             align: "center",
             barWidth: 24 * 60 * 60 * 600,
             lineWidth:1
-        }
+        }*/
     }, {
         label: "推薦金額百分比",
         data: data3,
@@ -77,6 +84,21 @@ var dataset = [
 
     
 var options = {
+	//Flot 的堆疊要這樣設定，但是無法與折線圖相容(也就是折線會被bars吃掉)
+	series: {
+        stack: true,
+        bars: {
+            show: true
+        }/*,
+		lines:{
+			show:true
+		}*/
+    },
+    bars: {
+        align: "center",
+        barWidth:24 * 60 * 60 * 600,
+        lineWidth: 1
+    },
     xaxis: {
         mode: "time",
 		monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -167,6 +189,7 @@ function gd(year, month, day) {
 }
 
 var previousPoint = null, previousLabel = null;
+var monthNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
 $.fn.UseTooltip = function () {
     $(this).bind("plothover", function (event, pos, item) {
@@ -178,34 +201,52 @@ $.fn.UseTooltip = function () {
                 //console.log(item.datapoint);
                 var x = item.datapoint[0];
                 var y = item.datapoint[1];
-
+                
                 var color = item.series.color;
-                var date = "Jan " + new Date(x).getDate();
-
+                var month = new Date(x).getMonth();
+                var day = new Date(x).getDate();
+                
                 //console.log(item);
+                var prefix = "";
                 var unit = "";
-
-                if (item.series.label == "Sea Level Pressure") {
-                    unit = "hPa";
-                } else if (item.series.label == "Wind Speed") {
-                    unit = "km/hr";
-                } else if (item.series.label == "Temperature") {
-                    unit = "°C";
+                
+                //alert(item.seriesIndex + ":" + item.series.label);
+                if (item.series.label == "推薦成交金額") {
+                	prefix = "$";
+                    unit = "";
+                } else if (item.series.label == "總成交金額") {
+                	prefix = "$";
+                    unit = "";
+                } else if (item.series.label == "推薦金額百分比") {
+                	prefix = "";
+                    unit = "%";
                 }
-								
+                //OR (上下效果一樣)
+                /*if (item.seriesIndex == 0) {
+                	prefix = "$";
+                    unit = "";
+                } else if (item.seriesIndex == 1) {
+                	prefix = "$";
+                    unit = "";
+                } else if (item.seriesIndex == 2) {
+                	prefix = "";
+                    unit = "%";
+                }*/
+                //alert(item.pageX + ":" + item.pageY + '===' + monthNames[month]);
                 showTooltip(item.pageX, item.pageY, color,
-                            "<strong>" + item.series.label + "</strong><br>" + date +
-                            " : <strong>" + y + "</strong> " + unit + "");
+                			"<div style='font-size: 14px'>" + item.series.label + "<br>" + monthNames[month] +
+                			"/" + day + " : " + prefix + y + unit + "</div>");
             }
         } else {
-            $("#tooltip").remove();
+        	$("#tooltip").remove();
             previousPoint = null;
         }
     });
 };
 
 function showTooltip(x, y, color, contents) {
-    $('<div id="tooltip">' + contents + '</div>').css({
+	//alert('contents = ' + contents);
+	$('<div id="tooltip">' + contents + '</div>').css({
         position: 'absolute',
         display: 'none',
         top: y - 40,
@@ -228,6 +269,7 @@ function onloadTest() {
 
 </head>
 <body onload="onloadTest();">
+	<div id="legendholder"></div>
 	<div id="flot-placeholder" style="width:550px;height:300px;margin:10% auto"></div>
 </body>
 </html>

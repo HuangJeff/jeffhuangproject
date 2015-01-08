@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>折線圖和直條圖範例</title>
+<!--
+這個是重疊版的，如果外層的那個直條圖 > 內層的，會把他蓋過去(會點不到)。
+-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+<!-- <script type="text/javascript" src="flot-0.8.3/jquery.min.js"></script> -->
+
+<script type="text/javascript" src="flot-0.8.3/jquery.flot.min.js"></script>
+<script type="text/javascript" src="flot-0.8.3/jquery.flot.time.js"></script>    
+<script type="text/javascript" src="flot-0.8.3/jshashtable-2.1.js"></script>    
+<script type="text/javascript" src="flot-0.8.3/jquery.numberformatter-1.2.3.min.js"></script>
+<script type="text/javascript" src="flot-0.8.3/jquery.flot.symbol.js"></script>
+<script type="text/javascript" src="flot-0.8.3/jquery.flot.axislabels.js"></script>
+
+<script>
+//******* 2014 Gold Price Chart
+//總成交金額
+var data1 = [
+    [1419868800000,3200.0],[1419782400000,3700.0]
+];
+//推薦成交金額
+var data2 = [
+    [1419868800000,10300.0],[1419782400000,4700.0],[1419609600000,0.0]
+];
+
+//推薦金額百分比
+var data3 = [
+    [1419868800000,31.07],[1419782400000,78.72]
+];
+
+
+var dataset = [
+    {
+        label: "推薦成交金額",
+        data: data2,         
+        color: "#756600",
+		yaxis: 1,
+        bars: {
+            show: true, 
+            align: "center",
+            barWidth: 24 * 60 * 60 * 600,
+            lineWidth:1
+        }
+    }, {
+        label: "總成交金額",
+        data: data1,
+        yaxis: 1,
+        color: "#0062FF",
+        bars: {
+            show: true, 
+            align: "center",
+            barWidth: 24 * 60 * 60 * 600,
+            lineWidth:1
+        }
+    }, {
+        label: "推薦金額百分比",
+        data: data3,
+        yaxis: 2,
+        color: "#FF0000",
+		points: {
+			show: true,
+			//symbol: "triangle",
+			//fillColor: "#0062FF",
+			radius: 2
+		},
+		lines:{
+			show:true
+		},
+		bars: {
+			show: false
+		}
+    }
+];
+
+    
+var options = {
+    xaxis: {
+        mode: "time",
+		monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+		timeformat: "%m/%d",
+        tickSize: [1, "day"],        
+        tickLength: 0,
+        axisLabel: "日期",
+        axisLabelUseCanvas: true,
+        axisLabelFontSizePixels: 12,
+        axisLabelFontFamily: 'Verdana, Arial',
+        axisLabelPadding: 18,
+        color: "black"
+    },
+    yaxes: [{
+            position: "left",
+			min: 0,
+            //max: 1070,
+            color: "black",
+            axisLabel: "成交金額",
+            axisLabelUseCanvas: true,
+            axisLabelFontSizePixels: 12,
+            axisLabelFontFamily: 'Verdana, Arial',
+            axisLabelPadding: 3            
+        }, {
+            position: "right",
+            clolor: "black",
+	        min: 0,
+	        max: 100,
+            axisLabel: "推薦金額比率(%)",
+            axisLabelUseCanvas: true,
+            axisLabelFontSizePixels: 12,
+            axisLabelFontFamily: 'Verdana, Arial',
+            axisLabelPadding: 3
+        }/*,{
+            position: "right",
+            color: "black",
+            axisLabel: "Temperature (°C)",
+            axisLabelUseCanvas: true,
+            axisLabelFontSizePixels: 12,
+            axisLabelFontFamily: 'Verdana, Arial',
+            axisLabelPadding: 3            
+        }*/
+    ],
+    legend: {
+		show : true,	//顯示或隱藏圖例
+        noColumns: 0,	//設定圖例要以幾行顯示
+        labelBoxBorderColor: "#000000",
+        position:"nw"	//圖例位置 (north east, north west, south east, south west)
+        //container: '#legendholder'
+		/*
+		show: boolean
+		//顯示或隱藏圖例
+		labelFormatter: null or (fn: string, series object -> string)
+		//可自行程式化定義你要的圖例資料
+		labelBoxBorderColor: color
+		//圖例邊框顏色
+		noColumns: number
+		//設定圖例要以幾行顯示
+		position: "ne" or "nw" or "se" or "sw"
+		//圖例位置 (north east, north west, south east, south west)
+		margin: number of pixels or [x margin, y margin]
+		backgroundColor: null or color
+		backgroundOpacity: number between 0 and 1
+		container: null or jQuery object/DOM element/jQuery expression
+		*/
+    },
+    grid: {
+		labelMargin: 6, // in pixels
+        hoverable: true,
+        clickable: false,
+        borderWidth: 3
+        //backgroundColor: { colors: ["#ffffff", "#EDF5FF"] }
+    }
+};
+
+$(document).ready(function () {
+		//alert('Start...');
+    $.plot($("#flot-placeholder"), dataset, options);
+    $("#flot-placeholder").UseTooltip();
+    //alert('End...');
+});
+
+
+
+
+function gd(year, month, day) {
+    return new Date(year, month - 1, day).getTime();
+}
+
+var previousPoint = null, previousLabel = null;
+
+$.fn.UseTooltip = function () {
+    $(this).bind("plothover", function (event, pos, item) {
+        if (item) {
+            if ((previousLabel != item.series.label) || (previousPoint != item.dataIndex)) {
+                previousPoint = item.dataIndex;
+                previousLabel = item.series.label;
+                $("#tooltip").remove();
+                //console.log(item.datapoint);
+                var x = item.datapoint[0];
+                var y = item.datapoint[1];
+
+                var color = item.series.color;
+                var date = "Jan " + new Date(x).getDate();
+
+                //console.log(item);
+                var unit = "";
+
+                if (item.series.label == "Sea Level Pressure") {
+                    unit = "hPa";
+                } else if (item.series.label == "Wind Speed") {
+                    unit = "km/hr";
+                } else if (item.series.label == "Temperature") {
+                    unit = "°C";
+                }
+								
+                showTooltip(item.pageX, item.pageY, color,
+                            "<strong>" + item.series.label + "</strong><br>" + date +
+                            " : <strong>" + y + "</strong> " + unit + "");
+            }
+        } else {
+            $("#tooltip").remove();
+            previousPoint = null;
+        }
+    });
+};
+
+function showTooltip(x, y, color, contents) {
+    $('<div id="tooltip">' + contents + '</div>').css({
+        position: 'absolute',
+        display: 'none',
+        top: y - 40,
+        left: x - 120,
+        border: '2px solid ' + color,
+        padding: '3px',
+        'font-size': '9px',
+        'border-radius': '5px',
+        'background-color': '#fff',
+        'font-family': 'Verdana, Arial, Helvetica, Tahoma, sans-serif',
+        opacity: 0.9
+    }).appendTo("body").fadeIn(200);
+}
+
+function onloadTest() {
+	//alert('123');
+}
+
+</script>
+
+</head>
+<body onload="onloadTest();">
+	<div id="flot-placeholder" style="width:550px;height:300px;margin:10% auto"></div>
+</body>
+</html>
