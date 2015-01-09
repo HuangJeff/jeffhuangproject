@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sample for ClickLog & BuyLog information</title>
+
+<!-- 步驟一、在使用TPRS推薦API的頁面上引用 tprs.js 與 jquery-1.8.0.min.js -->
+<!-- <script type="text/javascript" src="jquery-1.8.0.min.js"></script> -->
+<!-- 使用jQuery網站上提供的Library，避免太多js -->
+<!--<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/tprs-2.2.js"></script> 
+
+<script>
+	var cid = "root"; //系統給定的公司帳號
+	var acctId = "root"; //系統給定的使用者帳號
+	var campaignId = "A_1501071532341"; //系統給定的活動代碼
+	
+	var tprs = new TrsApi(cid,acctId,campaignId);
+	
+	/*
+	 * 紀錄Click Log
+	 * 參數說明:
+	 * -------------------------------------------------
+	 * userId : 使用者代號
+	 * itemId : 商品編號
+	 * isTRS : 此click是否因為TRS推薦, "Y" or "N" (預設為N)
+	 * page : 此click所屬網頁名稱
+	 * mainCate : 大類
+	 * middleCate : 中類
+	 * endCate : 小類
+	 * --------------------------------------------------
+	 */
+	 function createClickLog(){
+		var userId = $("#userId").val();
+		var itemId = $("#itemId").val();
+		var page = $("#page").val();
+		page = page + '_' + userId + '_' + itemId;
+		var isTRS = $("#isTRS").val();
+		
+		var mainCate = $("#mainCate").val();
+		var middleCate = $("#middleCate").val();
+		var endCate = $("#endCate").val();
+		
+		/*
+		var userId = "11";
+		var itemId = "102";
+		var isTRS = "N";
+		var page = "page3";
+		var mainCate = "A";
+		var middleCate = "AB";
+		var endCate = "ABC";
+		*/
+		alert("==start ClickLog AJAX==" + campaignId + " userId:" + userId);
+		tprs.click(userId,itemId,isTRS,page,mainCate,middleCate,endCate);
+		alert("==The End==");
+	}
+	
+	/*
+	 * 紀錄Buy Log
+	 * 參數說明:
+	 * -------------------------------------------------
+	 * userId : 使用者代號
+	 * itemId : 商品編號
+	 * quantity : 購買數量
+	 * --------------------------------------------------
+	 */
+	 function createBuyLog(){
+		var userId = $("#userId").val();
+		var itemId = $("#itemId").val();
+		var quantity = $("#quantity").val();
+		/*
+		var userId = "12";
+		var itemId = "101";
+		var quantity = 2;
+		*/
+		alert("==start BuyLog AJAX==" + campaignId + " userId:" + userId);
+		tprs.buy(userId,itemId,quantity);
+		alert("==The End==");
+	}
+</script>
+
+
+
+</head>
+
+<body>
+<H1> Sample for ClickLog & BuyLog information </H1>
+This HTML file could not be executed on your local file system, please run it from a web server. <br/>
+無法在local端用瀏覽器打開檔案方式執行,請放置於web server上測試<br/>
+<br/>
+<table style="width : 50%;" border=1>
+	<tr>
+		<th style="width : 20%;">cid</th><td>root</td>
+		<th style="width : 20%;">acctId</th><td>root</td>
+		<th style="width : 20%;">campaignId</th><td>A_1501071532341</td>
+	</tr>
+</table>
+<hr>
+
+<table style="width : 50%;" border=1>
+	<tr>
+		<th style="width : 20%;" align="right">☆★使用者</th>
+		<td><input type="text" id="userId">userId</td>
+		<td rowspan="4">★<button onclick="javascript:createClickLog();">ClickLog</button></td>
+	</tr>
+	<tr>
+		<th style="width : 20%;" align="right">☆★商品編號</th>
+		<td><input type="text" id="itemId">itemId</td>
+	</tr>
+	<tr>
+		<th align="right">★大類編號</th>
+		<td><input type="text" id="mainCate">mainCate</td>
+	</tr>
+	<tr>
+		<th align="right">★中類編號</th>
+		<td><input type="text" id="middleCate">middleCate</td>
+	</tr>
+	<tr>
+		<th align="right">★小類編號</th>
+		<td><input type="text" id="endCate">endCate</td>
+		<td rowspan="4">☆<button onclick="javascript:createBuyLog();">BuyLog</button></td>
+	</tr>
+	<tr>
+		<th align="right">★網頁名稱</th>
+		<td><input type="text" id="page" value='page1'>page</td>
+	</tr>
+	<tr>
+		<th align="right">★TRS推薦</th>
+		<td><input type="text" id="isTRS" value='Y'>isTRS</td>
+	</tr>
+	<tr>
+		<th align="right">☆購買數量</th>
+		<td><input type="text" id="quantity" value='2'>quantity</td>
+	</tr>
+</table>
+<br><br><br>
+<a href="javascript:createClickLog();">Click Log</a>
+<br/><br/>
+<a href="javascript:createBuyLog();">Buy Log</a>
+<br/><br/>
+
+</body>
+</html>

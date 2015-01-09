@@ -19,6 +19,24 @@ function TrsApi(cid,acctId,campaignId) {
 	var ajax_content_type = "application/x-www-form-urlencoded;charset=utf-8";
 	var ajaxcache = false;
 	
+	/*
+	* 重設TPRS系統需要的資訊(動態)
+	* serverUrl : TPRS Server URL
+	* cid : 公司帳號
+	* accid : 使用者帳號
+	* campaignId : 活動代碼
+	*/
+	this.reSetSysSetting = function(serverUrl, cid, accid, campaignId) {
+		tprs_server_url = serverUrl;
+		ptsub = cid;
+		ptsua = accid;
+		ptsmd = campaignId;
+	}
+	
+	this.debug = function(_debug) {
+		debug = _debug;
+	}
+	
 	/******************************************
 	 * Feedback log
 	 *******************************************/
@@ -37,7 +55,6 @@ function TrsApi(cid,acctId,campaignId) {
 	 * --------------------------------------------------
 	 */		
 	this.click = function(userId,itemId,isTRS,page,mainCate,middleCate,endCate) {
-		
 		mainCate = encodeURI(mainCate);
 		middleCate = encodeURI(middleCate);
 		endCate = encodeURI(endCate);
@@ -677,11 +694,11 @@ function get_TprsUserId(){
 	var trsuser = readCookie('trsuser');	 
 	
 	if(typeof trsuser == undefined || trsuser == undefined || trsuser == '' || trsuser == 'undefined' || trsuser == 'null'){
-		//if(debug) alert('trsuser is undefined or null, creat one..');
+		//if(debug) alert('get_TprsUserId - trsuser is undefined or null, creat one..');
 		createCookie ('trsuser', guid(),10000);
 	}
 	trsuser = readCookie('trsuser');
-	//if(debug) alert('userId : ' + 	trsuser);
+	//if(debug) alert('get_TprsUserId - userId : ' + 	trsuser);
 	return trsuser;
 }
 
@@ -700,7 +717,7 @@ function createCookie(name,value,days) {
 function readCookie(name) {
 	var cookie_value ;
     var nameEQ = name + "=";
-	//if(debug) alert('cookie : ' + document.cookie);
+	//if(debug) alert('readCookie - cookie : ' + document.cookie);
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
         var c = ca[i];
@@ -709,7 +726,7 @@ function readCookie(name) {
 			cookie_value =  c.substring(nameEQ.length,c.length);
 		} 
     }
-	//if(debug) alert('cookie ' + name + ' : ' + cookie_value);
+	//if(debug) alert('readCookie - cookie ' + name + ' : ' + cookie_value);
     return cookie_value;
 }
 
