@@ -1,6 +1,6 @@
 # jeffhuangproject
 Automatically exported from code.google.com/p/jeffhuangproject
 
-預計開發一個『動態表單系統』
+workspace_01 -- 預計開發『動態表單系統』(完全採Java Swing方式來寫)
 
-另一個專
+workspace_02 -- 用來測試Web面的小程式練習區
