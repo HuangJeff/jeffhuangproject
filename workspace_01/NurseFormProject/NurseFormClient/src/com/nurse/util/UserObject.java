@@ -4,15 +4,15 @@
 package com.nurse.util;
 
 /**
- * @author test
- * Àx¦sµn¤JªÌªº©Ò¦³­Ó¤H¸ê°T
+ * @author jeff
+ * å„²å­˜ç™»å…¥è€…çš„æ‰€æœ‰å€‹äººè³‡è¨Š
  */
 public class UserObject {
 	
 	private static UserObject ins = null;
 	
 	/**
-	 * «Ø¥ß UserObject ª«¥ó
+	 * å»ºç«‹ UserObject ç‰©ä»¶
 	 * @return UserObject
 	 */
 	public static UserObject getInstance() {
@@ -23,21 +23,21 @@ public class UserObject {
 	}
 	
 	/**
-	 * «Øºc¤l¡C<br>ªì©l¤Æ¦U¼Æ­È
+	 * å»ºæ§‹å­ã€‚<br>åˆå§‹åŒ–å„æ•¸å€¼
 	 */
 	private UserObject() {
 		this.cleanAllData();
 	}
 	
 	/**
-	 * ²M°£¼Æ­È(ÁÙ­ì¹w³]­È)
+	 * æ¸…é™¤æ•¸å€¼(é‚„åŸé è¨­å€¼)
 	 */
 	public void cleanAllData() {
 		
 	}
 	
 	/**
-	 * ²¾°£¼Æ­È
+	 * ç§»é™¤æ•¸å€¼
 	 */
 	public void removeAllData() {
 		

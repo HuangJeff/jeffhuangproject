@@ -16,8 +16,8 @@ import javax.swing.JLabel;
 
 @SuppressWarnings("serial")
 public class AdminUI extends JFrame implements ActionListener {
-	/** µn¤Jµøµ¡ */
-	private final String LOGIN_STR = "µn¤Jµøµ¡";
+	/** ç™»å…¥è¦–çª— */
+	private final String LOGIN_STR = "ç™»å…¥è¦–çª—";
 	/** BTN_ACCOUNT */
 	private final String BTN_ACC_CMD = "BTN_ACCOUNT";
 	/** BTN_CLEAN */
@@ -36,15 +36,15 @@ public class AdminUI extends JFrame implements ActionListener {
 			jpanel.setBorder(BorderFactory.createTitledBorder(LOGIN_STR));
 			
 			JPanel p01 = new JPanel(new FlowLayout(FlowLayout.LEFT, 5, 0));
-			JLabel labelAcc = new JLabel("±b¸¹¡G");
+			JLabel labelAcc = new JLabel("å¸³è™Ÿï¼š");
 			JTextField accTxtField = new JTextField(20);
 			JPanel p02 = new JPanel(new FlowLayout(FlowLayout.LEFT, 5, 0));
-			JLabel labelPas = new JLabel("±K½X¡G");
+			JLabel labelPas = new JLabel("å¯†ç¢¼ï¼š");
 			JPasswordField pasTxtField = new JPasswordField(20);
 			
 			JPanel p03 = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 0));
-			JButton btnAcc = new JButton("µn¤J");
-			JButton btnCln = new JButton("²M°£");
+			JButton btnAcc = new JButton("ç™»å…¥");
+			JButton btnCln = new JButton("æ¸…é™¤");
 			btnAcc.setActionCommand(BTN_ACC_CMD);
 			btnAcc.addActionListener(this);
 			btnCln.setActionCommand(BTN_CLN_CMD);
@@ -68,7 +68,7 @@ public class AdminUI extends JFrame implements ActionListener {
 	}
 	
 	/**
-	 * «Ø¥ßµn¤JUI
+	 * å»ºç«‹ç™»å…¥UI
 	 */
 	public static void tobeCreateAdminFrameUI() {
 		//setDefaultLookAndFeelDecorated(true);

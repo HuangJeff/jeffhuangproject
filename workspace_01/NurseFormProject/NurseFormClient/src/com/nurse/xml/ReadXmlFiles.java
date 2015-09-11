@@ -14,8 +14,8 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 /**
- * @author test
- * ³B²zXML File
+ * è™•ç†XML File
+ * @author jeff
  */
 public class ReadXmlFiles {
 	
@@ -27,7 +27,7 @@ public class ReadXmlFiles {
 	}
 	
 	/**
-	 * ¸ü¤JXML¸ê°T
+	 * è¼‰å…¥XMLè³‡è¨Š
 	 */
 	public void preLoadXmlData() throws Exception {
 		String xmlFileStr = "D:\\My Personal Workspace\\jeffhuangproject\\myWorkspace\\proj02\\NurseFormClient\\data\\xml\\NISEV001.xml";
@@ -38,10 +38,10 @@ public class ReadXmlFiles {
 		System.out.println("xmlFile.isDirectory()==>" + xmlFile.isDirectory());
 		File tmpFile = null;
 		if(xmlFile.isDirectory()) {
-			//String[] sa = xmlFile.list(); //ÀÉ¦WArray
+			//String[] sa = xmlFile.list(); //æª”åArray
 			//System.out.println("xmlFile.list()==>" + sa);
 			for(File f : xmlFile.listFiles()) {
-				if(f.getName().equals("NISEV001-1.xml")) { //¥ý´ú¤@¤äÀÉ®×
+				if(f.getName().equals("NISEV001-1.xml")) { //å…ˆæ¸¬ä¸€æ”¯æª”æ¡ˆ
 					tmpFile = f;
 					break;
 				}
@@ -58,7 +58,7 @@ public class ReadXmlFiles {
 		System.out.println("iay::" + iay);
 		
 		for(int i=0;i<iay.size();i++) {
-			//¸ê®Æ
+			//è³‡æ–™
             String item_id = 	(String)((HashMap)iay.get(i)).get("id");
             String item_name = 	(String)((HashMap)iay.get(i)).get("title");
             String item_type = 	(String)((HashMap)iay.get(i)).get("type");
@@ -68,7 +68,7 @@ public class ReadXmlFiles {
             String item_fs = 	(String)((HashMap)iay.get(i)).get("font_size");
             String item_obid = 	(String)((HashMap)iay.get(i)).get("obid");
             String ntype = 		(String)((HashMap)iay.get(i)).get("ntype");
-            //±±¨î
+            //æŽ§åˆ¶
             String item_menu = 	(String)((HashMap)iay.get(i)).get("menu");
             
             
@@ -93,23 +93,23 @@ public class ReadXmlFiles {
 	}
 	
 	/**
-     * ³z¹L type ¨ú±o¬Û¹ïÀ³ªº¸`ÂI¸ê°T
+     * é€éŽ type å–å¾—ç›¸å°æ‡‰çš„ç¯€é»žè³‡è¨Š
      * @param rootElement : xml element
-     * @param type : §PÂ_¦¡
+     * @param type : åˆ¤æ–·å¼
      * @return Element
      * @throws Exception
      */
     public Element getElementFromType(Element rootElement
                                      ,String type) throws Exception {
-        //¶}·sªº¡u®Ú¡v¸`ÂI
+        //é–‹æ–°çš„ã€Œæ ¹ã€ç¯€é»ž
         Element newMenuNode = DocumentHelper.createElement("Menu");
-        //¡u®Ú¡v¸`ÂIÄÝ©Ê
+        //ã€Œæ ¹ã€ç¯€é»žå±¬æ€§
         newMenuNode.addAttribute("id", rootElement.attribute("id").getValue());
         newMenuNode.addAttribute("title", "root");
         newMenuNode.addAttribute("desc", "root");
         newMenuNode.addAttribute("type", "String");
         newMenuNode.addAttribute("lov", "");
-        newMenuNode.addAttribute("font", "·s²Ó©úÅé");
+        newMenuNode.addAttribute("font", "æ–°ç´°æ˜Žé«”");
         newMenuNode.addAttribute("font_size", "14");
         newMenuNode.addAttribute("color", "black");
         newMenuNode.addAttribute("height", "30");
@@ -139,7 +139,7 @@ public class ReadXmlFiles {
     }
 	
     /**
-     * ³z¹L[¸`ÂIid(menuId)]¨ú±o¨äElement
+     * é€éŽ[ç¯€é»žid(menuId)]å–å¾—å…¶Element
      * @param rootElement
      * @param menuId
      * @return
@@ -148,7 +148,7 @@ public class ReadXmlFiles {
     public Element getElementWithMenuId(Element rootElement,
     		String menuId) throws Exception {
         Iterator it = rootElement.elementIterator();
-        //¥u°µ²Ä¤@¼h ¤£»¼°j
+        //åªåšç¬¬ä¸€å±¤ ä¸éžè¿´
         while(it.hasNext()) {
             Element child = (Element)it.next();
             String childId = child.attribute("id").getValue();
@@ -162,9 +162,9 @@ public class ReadXmlFiles {
     }
     
     /**
-     * ¸ÑªRXML(rootElement)¤W©Ò¦³ªºTag¡A¬ï¤JHashMap¨Ã©ñ¤Jlist¤¤
-     * @param rootElement : UI¤WXMLµ²ºc
-     * @param list : ¸ÑªR«á¨C­ÓTagªº¸ê°T
+     * è§£æžXML(rootElement)ä¸Šæ‰€æœ‰çš„Tagï¼Œç©¿å…¥HashMapä¸¦æ”¾å…¥listä¸­
+     * @param rootElement : UIä¸ŠXMLçµæ§‹
+     * @param list : è§£æžå¾Œæ¯å€‹Tagçš„è³‡è¨Š
      * @param menuName
      * @return list
      * @throws Exception
@@ -178,8 +178,8 @@ public class ReadXmlFiles {
         Iterator it = rootElement.elementIterator();
         while(it.hasNext()) {
             Element child = (Element)it.next();
-            String childName = child.getName();	//¨ú±o Tag Name
-            //¥uÅý¦XªkªºTag Name³q¹L
+            String childName = child.getName();	//å–å¾— Tag Name
+            //åªè®“åˆæ³•çš„Tag Nameé€šéŽ
             if("Menu".equals(childName) || "Item".equals(childName)) {
 //            	MigoUtilMethod.printString("-------------------------------");
 //            	MigoUtilMethod.printString(" obid= "+child.attribute("obid").getValue());
@@ -194,7 +194,7 @@ public class ReadXmlFiles {
 //            	MigoUtilMethod.printString(" menuName= "+menuName);
 //            	MigoUtilMethod.printString(" lov= "+child.attribute("lov").getValue());
 //            	MigoUtilMethod.printString("-------------------------------\n");
-	            //¨ú±oTag¤¤©Ò¦³ªºÄÝ©Ê¸ê°T
+	            //å–å¾—Tagä¸­æ‰€æœ‰çš„å±¬æ€§è³‡è¨Š
 	            String childId = child.attribute("id").getValue();
 	            String childTitle = child.attribute("title").getValue();
 	            
@@ -223,7 +223,7 @@ public class ReadXmlFiles {
 	            list.add(dataMap);
 	            
 	            if("Menu".equals(childName)) {
-	            	//§PÂ_¦³¨S¦³¤p«Ä
+	            	//åˆ¤æ–·æœ‰æ²’æœ‰å°å­©
 	                if(child.elements().size() > 0) {
 	                    getAllItemData(child, list, childTitle);
 	                }

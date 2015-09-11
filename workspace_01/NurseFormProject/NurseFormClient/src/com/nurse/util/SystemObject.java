@@ -4,8 +4,8 @@
 package com.nurse.util;
 
 /**
- * @author test
- * Àx¦s¨t²Î¤Wªº¦UºØ¸ê°T
+ * @author jeff
+ * å„²å­˜ç³»çµ±ä¸Šçš„å„ç¨®è³‡è¨Š
  */
 public class SystemObject {
 	private static SystemObject ins = null;
@@ -19,21 +19,21 @@ public class SystemObject {
 	}
 	
 	/**
-	 * «Øºc¤l¡C<br>ªì©l¤Æ¦U¼Æ­È
+	 * å»ºæ§‹å­ã€‚<br>åˆå§‹åŒ–å„æ•¸å€¼
 	 */
 	private SystemObject() {
 		this.cleanAllData();
 	}
 	
 	/**
-	 * ²M°£¼Æ­È(ÁÙ­ì¹w³]­È)
+	 * æ¸…é™¤æ•¸å€¼(é‚„åŸé è¨­å€¼)
 	 */
 	public void cleanAllData() {
 		
 	}
 	
 	/**
-	 * ²¾°£¼Æ­È
+	 * ç§»é™¤æ•¸å€¼
 	 */
 	public void removeAllData() {
 		
